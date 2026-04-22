@@ -95,10 +95,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
               <section id="overview" className="scroll-mt-32">
                 <h2 className="text-2xl font-display font-medium text-white mb-6 flex items-center gap-2">Overview</h2>
-                <div className="flex flex-col gap-4 text-neutral-200 leading-relaxed text-lg">
+                <div className="flex flex-col gap-4 text-neutral-200 leading-relaxed text-lg mb-12">
                   {project.about.split('\n\n').map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
+                </div>
+
+                <div className="w-full max-w-3xl bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden shadow-2xl">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={1200}
+                    height={900}
+                    className="object-contain w-full h-auto"
+                    referrerPolicy="no-referrer"
+                    unoptimized
+                  />
                 </div>
               </section>
             </section>
@@ -116,7 +128,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {project.challenge.image && (
+                <div className="w-full aspect-video sm:aspect-[21/9] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-lg">
+                  <Image src={project.challenge.image} alt="Challenge context" fill className="object-cover" unoptimized referrerPolicy="no-referrer" />
+                </div>
+              )}
+
+              <div className={`grid grid-cols-1 md:grid-cols-2 ${project.challenge.cards.length >= 3 ? 'lg:grid-cols-3' : ''} gap-6`}>
                 {project.challenge.cards.map((card, idx) => (
                   <div key={idx} className="bg-[#111111]/80 backdrop-blur-md border border-neutral-800 rounded-2xl p-8 flex flex-col gap-4">
                     <AlertCircle className="w-5 h-5 text-neutral-400 mb-2" />
@@ -140,6 +158,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </p>
               </div>
 
+              {project.solution.image && (
+                <div className="w-full aspect-video sm:aspect-[21/9] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-lg">
+                  <Image src={project.solution.image} alt="Solution context" fill className="object-cover object-top" unoptimized referrerPolicy="no-referrer" />
+                </div>
+              )}
+
               <div className="flex flex-col gap-6 w-full lg:max-w-4xl">
                 {project.solution.features.map((feature, idx) => (
                   <div key={idx} className="flex gap-6 items-start group">
@@ -155,38 +179,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               </div>
             </section>
 
-            {/* Main Image Gallery */}
-            <section className="flex flex-col gap-6 w-full -mx-6 px-6 lg:mx-0 lg:px-0">
-              <div className="w-full aspect-video sm:aspect-[16/10] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-2xl">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                  referrerPolicy="no-referrer"
-                  unoptimized
-                />
-              </div>
-
-              {project.gallery.length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                  {project.gallery.map((img, idx) => (
-                    <div key={idx} className="w-full aspect-[4/3] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-xl">
-                      <Image
-                        src={img}
-                        alt={`${project.title} screenshot ${idx + 1}`}
-                        fill
-                        className="object-cover"
-                        referrerPolicy="no-referrer"
-                        unoptimized
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </section>
-
-            <hr className="border-neutral-800" />
 
             {/* Tech Stack Section */}
             <section id="tech-stack" className="flex flex-col gap-12 scroll-mt-32">
@@ -198,6 +190,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   {project.techStack.description}
                 </p>
               </div>
+
+              {project.techStack.image && (
+                <div className="w-full aspect-video sm:aspect-[21/9] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-lg">
+                  <Image src={project.techStack.image} alt="Tech Stack diagram" fill className="object-cover" unoptimized referrerPolicy="no-referrer" />
+                </div>
+              )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {project.techStack.categories.map((category, idx) => (
@@ -234,6 +232,24 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   </div>
                 ))}
               </div>
+
+              {project.gallery.length > 0 && (
+                <div className="flex flex-col gap-8 mt-8">
+                  {project.gallery.map((img, idx) => (
+                    <div key={idx} className="w-full max-w-3xl bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden shadow-xl">
+                      <Image
+                        src={img}
+                        alt={`${project.title} screenshot ${idx + 1}`}
+                        width={1200}
+                        height={900}
+                        className="object-contain w-full h-auto"
+                        referrerPolicy="no-referrer"
+                        unoptimized
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </section>
 
           </div>

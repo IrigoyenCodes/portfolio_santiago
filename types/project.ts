@@ -8,16 +8,19 @@ export type ProjectDetails = {
   challenge: {
     title: string;
     description: string;
+    image?: string;
     cards: { title: string; description: string }[];
   };
   solution: {
     title: string;
     description: string;
+    image?: string;
     features: { title: string; description: string }[];
   };
   techStack: {
     title: string;
     description: string;
+    image?: string;
     categories: { name: string; description: string }[];
   };
   results: { title: string; description: string }[];

@@ -1,40 +1,92 @@
 {
   "slug": "udlap-document-extractor",
-  "order": 7,
-  "title": "UDLAP Document Extractor",
-  "subtitle": "Intelligent OCR and full-stack document processing system reducing manual workloads by 80%.",
-  "about": "What is the Document Extractor?\n\nAn internal AI platform built for the UDLAP IT department designed to automate the recognition, classification, and data extraction of various institutional documents seamlessly via advanced vision-language models.",
-  "image": "https://picsum.photos/seed/udlap1/1200/800",
-  "stats": ["React", "TypeScript", "OpenRouter", "Qwen3"],
-  "gallery": [],
+  "order": 1,
+  "title": "UDLAP DOCUMENT EXTRACTOR",
+  "subtitle": "Browser-native AI pipeline that converts bulk institutional scans into structured, exportable data — zero manual entry.",
+  "about": "What is the UDLAP Document Extractor?\n\nInstitutional environments generate thousands of unstructured physical documents — work orders, supply requests, maintenance logs — that require hours of manual transcription. This React-based utility eliminates that bottleneck by routing raw PDFs and image scans through Vision Language Models, classifying each document by type, extracting its fields into a validated JSON schema, and exporting the aggregated results directly to Excel — all inside the browser, with no backend required.",
+  "image": "/project_images/udlap_extractor_processed.png",
+  "stats": [
+    "React 19",
+    "TypeScript",
+    "Gemini & OpenRouter",
+    "Vite"
+  ],
+  "gallery": [
+    "/project_images/udlap_extractor_main.png",
+    "/project_images/udlap_extractor_processed.png",
+    "/project_images/udlap_extractor_modify.png",
+    "/project_images/udlap_extractor_full_main.png"
+  ],
   "challenge": {
-    "title": "The Challenge: Manual Administrative Processing",
-    "description": "Scaling administrative workflows was bottlenecked by slow, manual data entry leading to operational delays.",
+    "title": "The Challenge: Unstructured Paperwork at Institutional Scale",
+    "description": "Processing high volumes of mixed-format institutional documents manually is error-prone and slow. The system needed to parse bulk PDFs concurrently, survive cloud API rate limits without degrading the UI, and accurately interpret documents with varying physical conditions — faded ink, handwriting, and inconsistent layouts.",
     "cards": [
-      { "title": "Time Intensive", "description": "Manual extraction of hundreds of fields took thousands of hours per month." },
-      { "title": "High Error Rate", "description": "Fatigue-driven typographical errors broke downstream administrative integrations." },
-      { "title": "Unstructured Data", "description": "Traditional bounded OCR failed drastically on highly unstructured institutional document layouts." }
+      {
+        "title": "Chaos to Schema",
+        "description": "Scanned documents carry no metadata, no consistent structure, and no predictable layout. The system had to infer document type and field boundaries from raw visual context alone."
+      },
+      {
+        "title": "Resilient Async Queue",
+        "description": "Sequential AI requests with rate limit exposure required a stateful processing queue that could pause, recover, and report real-time ETA — without freezing the browser thread."
+      }
     ]
   },
   "solution": {
-    "title": "Our Solution: Vision-Language Pipeline",
-    "description": "Engineered a robust AI pipeline leaning on specialized Vision Language Models to contextually parse full document layouts with extreme accuracy.",
+    "title": "The Solution: Dual-Provider AI Architecture with Fallback Strategy",
+    "description": "A custom Service Manager orchestrates document processing through a primary AI provider, automatically falling back to a secondary model on failure — ensuring maximum uptime regardless of individual API availability.",
     "features": [
-      { "title": "Intelligent Extraction", "description": "Using Qwen3-VL-30B for complex field extraction directly from rasterized document images." },
-      { "title": "Batch Processing", "description": "Automated pipelines processing 50+ mixed documents in asynchronous batches." },
-      { "title": "Human-in-the-loop Interface", "description": "React and TypeScript frontend allowing IT staff to quickly review and approve extractions before sync." }
+      {
+        "title": "AI Provider Fallback Pattern",
+        "description": "A dynamic Service Manager switches between Google GenAI (Gemini Flash) and OpenRouter (Qwen-VL) based on live availability, creating a fault-tolerant extraction pipeline."
+      },
+      {
+        "title": "Strict JSON Schema Enforcement",
+        "description": "AI responses are validated against typed DTOs at generation time, preventing hallucinated or malformed data from ever reaching the UI layer."
+      },
+      {
+        "title": "Decoupled Container Hooks",
+        "description": "All file serialization (PDF-to-Base64) and sequential batching logic lives in isolated Custom Hooks, keeping UI components purely declarative and free of side effects."
+      },
+      {
+        "title": "On-Device Archival",
+        "description": "Processed files are automatically renamed using AI-extracted context and bundled into a downloadable ZIP via JSZip — creating a normalized archive without any server involvement."
+      }
     ]
   },
   "techStack": {
-    "title": "Our Tech-Stack: AI Vision & Modern Web",
-    "description": "Reliability paired with cutting-edge multimodal intelligence.",
+    "title": "Technical Depth: The Architecture",
+    "description": "A purpose-built frontend pipeline for AI-augmented document intelligence, designed for correctness and browser-native execution.",
     "categories": [
-      { "name": "Frontend App", "description": "React and TypeScript delivering a typesafe, snappy validation interface." },
-      { "name": "AI Provider", "description": "OpenRouter orchestrating massive multimodal queries to Qwen3 models dynamically." }
+      {
+        "name": "Frontend Engineering",
+        "description": "React 19 with Vite. Heavy use of useMemo for dashboard performance and strict functional component patterns for predictable, testable UI rendering."
+      },
+      {
+        "name": "Vision Language Models",
+        "description": "Integrated with the @google/genai SDK and OpenRouter endpoints. JSON Schema mode enforced at the API call level to constrain AI output to well-typed structures."
+      },
+      {
+        "name": "Browser File System",
+        "description": "Native File API for binary handling, Base64 encoding for multimodal LLM payloads, and JSZip for client-side archive generation — no uploads, no servers."
+      },
+      {
+        "name": "Type Safety",
+        "description": "End-to-end TypeScript interfaces map arbitrary AI output to strict Data Transfer Objects before any component renders, eliminating runtime type errors."
+      }
     ]
   },
   "results": [
-    { "title": "80% Time Reduction", "description": "Massive decrease in manual processing times for all integrated document templates." },
-    { "title": "Continuous Operations", "description": "Systematic error reductions ensuring university operations run without blockages." }
+    {
+      "title": "Eliminated manual data entry",
+      "description": "for bulk institutional document workflows, reducing processing time from hours to seconds per batch."
+    },
+    {
+      "title": "Zero-backend architecture",
+      "description": "The entire pipeline — AI inference, parsing, export, and archival — runs natively in the browser with no server dependency."
+    },
+    {
+      "title": "Fault-tolerant by design",
+      "description": "Dual-provider fallback ensures continuous operation even when a primary AI model is rate-limited or unavailable."
+    }
   ]
 }

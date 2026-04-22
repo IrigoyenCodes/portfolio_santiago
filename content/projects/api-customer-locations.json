@@ -5,34 +5,62 @@
   "subtitle": "Aggressive parsing pipeline identifying untracked geographic leads.",
   "about": "What is the API Pipeline?\n\nA targeted scraping and aggregation service running asynchronously to index geographic coordinates against local registries, discovering high-value B2B targets missed by standard tools.",
   "image": "https://picsum.photos/seed/scraper/1200/800",
-  "stats": ["Python", "FastAPI", "BeautifulSoup"],
+  "stats": [
+    "Python",
+    "FastAPI",
+    "BeautifulSoup"
+  ],
   "gallery": [],
   "challenge": {
     "title": "The Challenge: Manual Lead Generation",
     "description": "Finding businesses that do not have websites or robust digital footprints is nearly impossible through traditional search.",
     "cards": [
-      { "title": "Invisible Targets", "description": "Valuable leads absent from Google, relying only on physical footprint." },
-      { "title": "Rate Limiting", "description": "Standard scraping rapidly triggers IP bans and bot-protection." }
+      {
+        "title": "Invisible Targets",
+        "description": "Valuable leads absent from Google, relying only on physical footprint."
+      },
+      {
+        "title": "Rate Limiting",
+        "description": "Standard scraping rapidly triggers IP bans and bot-protection."
+      }
     ]
   },
   "solution": {
     "title": "Our Solution: Distributed Asynchronous Extraction",
     "description": "A highly resilient grid of parsing scripts utilizing proxies to build massive structured lists from deeply unstructured map nodes.",
     "features": [
-      { "title": "Resilient Crawling", "description": "Evades generic bot blocks via organic traffic synthesis techniques." },
-      { "title": "Geocoding Unification", "description": "Normalizes completely fractured address layouts into strict JSON schemas." }
+      {
+        "title": "Resilient Crawling",
+        "description": "Evades generic bot blocks via organic traffic synthesis techniques."
+      },
+      {
+        "title": "Geocoding Unification",
+        "description": "Normalizes completely fractured address layouts into strict JSON schemas."
+      }
     ]
   },
   "techStack": {
     "title": "Our Tech-Stack: Performance & Security",
     "description": "Python-heavy microservices architecture.",
     "categories": [
-      { "name": "Scraping Logic", "description": "BeautifulSoup and custom regex mechanics navigating chaotic DOM structures." },
-      { "name": "Delivery APIs", "description": "FastAPI providing blazingly fast websocket and REST endpoints to dump leads securely." }
+      {
+        "name": "Scraping Logic",
+        "description": "BeautifulSoup and custom regex mechanics navigating chaotic DOM structures."
+      },
+      {
+        "name": "Delivery APIs",
+        "description": "FastAPI providing blazingly fast websocket and REST endpoints to dump leads securely."
+      }
     ]
   },
   "results": [
-    { "title": "Massive Lead Gen", "description": "Sourced thousands of previously unreachable physical locations." },
-    { "title": "Clean Data Pipelining", "description": "Reduced manual data entry for the sales team by 100%." }
+    {
+      "title": "Massive Lead Gen",
+      "description": "Sourced thousands of previously unreachable physical locations."
+    },
+    {
+      "title": "Clean Data Pipelining",
+      "description": "Reduced manual data entry for the sales team by 100%."
+    }
   ]
 }

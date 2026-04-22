@@ -2,37 +2,79 @@
   "slug": "kor-activewear",
   "order": 5,
   "title": "KOR Activewear",
-  "subtitle": "Custom e-commerce infrastructure circumventing slow legacy storefronts.",
-  "about": "What is KOR Activewear?\n\nA rapidly scaling apparel brand needing a storefront capability exceeding standard Shopify template limitations, requiring deeply integrated headless operations.",
-  "image": "https://picsum.photos/seed/kor/1200/800",
-  "stats": ["Next.js", "E-commerce APIs", "Tailwind"],
-  "gallery": [],
+  "subtitle": "Custom Full-Stack E-Commerce Engine & REST API",
+  "about": "What is KOR Activewear?\n\nKOR Activewear is a completely custom-built e-commerce platform designed from the ground up without relying on monolithic frameworks like Shopify or React. The project demonstrates an in-depth understanding of fundamental web architecture by decoupling a vanilla JavaScript frontend from a custom PHP REST API, giving total control over security protocols, state management, and the rendering pipeline.",
+  "image": "/project_images/kor_activewear_hero.png",
+  "stats": [
+    "PHP REST API",
+    "Vanilla JS",
+    "MySQL",
+    "Glassmorphism"
+  ],
+  "gallery": [
+    "/project_images/kor_activewear_carrito.jpg",
+    "/project_images/kor_activewear_admin.png",
+    "/project_images/kor_activewear_adminDB.png",
+    "/project_images/kor_activewear_full_main.jpg"
+  ],
   "challenge": {
-    "title": "The Challenge: Monolithic E-Commerce Limitations",
-    "description": "Existing platforms strictly locked down customization, leading to poor brand expression and sluggish checkout waterfalls.",
+    "title": "The Challenge: Engineering Without Training Wheels",
+    "description": "Building a full-scale e-commerce platform natively required overcoming the complexities of state persistence, security, and dynamic rendering that modern frameworks usually obscure.",
     "cards": [
-      { "title": "Rigid Architectures", "description": "Unable to implement custom inventory tracking or split-payment logic." },
-      { "title": "Poor SEO", "description": "Heavy monolith footprints tanked core web vitals." }
+      {
+        "title": "Native State Management",
+        "description": "Orchestrating a persistent, cross-tab synchronized shopping cart and user authentication state using only Vanilla JavaScript and Web Storage APIs."
+      },
+      {
+        "title": "Security from Scratch",
+        "description": "Implementing enterprise-grade security protocols natively, requiring strict manual handling of password hashing, session tokens, and threat mitigation."
+      }
     ]
   },
   "solution": {
-    "title": "Our Solution: Headless API Integrations",
-    "description": "Decoupled the frontend visual layer entirely from the backend payment and inventory mechanics.",
+    "title": "The Solution: A Decoupled, Robust Architecture",
+    "description": "By designing a strict separation of concerns, the project features a highly secure PHP backend serving endpoints to an optimized, accessibility-first frontend.",
     "features": [
-      { "title": "Server-Side Generation", "description": "Blazing fast product pages pre-rendered directly on edge networks." },
-      { "title": "Custom Cart State", "description": "Flawless, optimistic cart updates allowing users to add/remove instantly." }
+      {
+        "title": "Custom PHP REST API",
+        "description": "Developed a full suite of API endpoints handling user authentication (login/register/reset), product CRUD operations, cart logic, and modular image uploads."
+      },
+      {
+        "title": "Dynamic Vanilla Frontend",
+        "description": "Engineered a responsive, glassmorphism-styled UI featuring Intersection Observer lazy loading, skeleton screens, and highly optimized DOM manipulation without Virtual DOM overhead."
+      }
     ]
   },
   "techStack": {
-    "title": "Our Tech-Stack: Edge E-Commerce",
-    "description": "Scalable stacks designed for Black Friday traffic spikes.",
+    "title": "Technical Depth: The Architecture",
+    "description": "A comprehensive breakdown of the custom infrastructure powering the platform.",
     "categories": [
-      { "name": "Framework", "description": "Next.js providing edge-routing, SSG, and ISR for real-time inventory adjustments." },
-      { "name": "Integrations", "description": "Deep REST integrations with fulfillment and payment processors." }
+      {
+        "name": "Backend Engineering",
+        "description": "Object-Oriented PHP driving REST endpoints. Features PDO prepared statements, transactional bulk operations, and modular helpers (config, env, database)."
+      },
+      {
+        "name": "Advanced Security",
+        "description": "Incorporated Argon2id password hashing, CSRF token validation, request rate-limiting, account lockouts, and comprehensive input sanitization routines."
+      },
+      {
+        "name": "Database Design",
+        "description": "Relational MySQL schema with properly enforced foreign keys, cascading deletes, and optimized indexing for products, variants, and session-based cart management."
+      },
+      {
+        "name": "Frontend & Optimization",
+        "description": "Semantic HTML5, CSS3 with advanced backdrop filters, and modular ES6 JavaScript. Includes Open Graph SEO, JSON-LD schemas, and ARIA accessibility standards."
+      }
     ]
   },
   "results": [
-    { "title": "Optimized Checkouts", "description": "Cart abandonment dropped drastically with faster optimistic UI states." },
-    { "title": "Bespoke Branding", "description": "Unshackled from themes, the site accurately reflects high-end aesthetic goals." }
+    {
+      "title": "Structural Integrity",
+      "description": "Delivered a tightly coupled schema-to-API data flow, ensuring reliable product management via a dedicated admin CRUD panel."
+    },
+    {
+      "title": "Production-Ready Security",
+      "description": "Successfully mitigated common web vulnerabilities, achieving a security posture typically reserved for enterprise systems rather than standard academic projects."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "slug": "nba-stats-predictor",
-  "order": 3,
+  "order": 4,
   "title": "NBA Stats Predictor",
   "subtitle": "High-accuracy Machine Learning pipeline forecasting sports outcomes.",
   "about": "What is the NBA Stats Predictor?\n\nA data-science-first application that ingests massive live APIs to feed a Random Forest machine learning model capable of generating highly accurate game likelihood predictions.",

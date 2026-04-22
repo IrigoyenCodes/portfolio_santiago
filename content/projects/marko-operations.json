@@ -1,43 +1,89 @@
 {
   "slug": "marko-operations",
-  "order": 2,
-  "title": "MARKO Operations",
-  "subtitle": "Centralized content operations platform with AI-powered semantic retrieval.",
-  "about": "What is MARKO?\n\nDigital creators and agencies suffer from scattered assets across cloud drives, notion boards, and messaging apps. MARKO acts as a single pane of glass aggregating media workflows.",
-  "image": "https://picsum.photos/seed/marko1/1200/800",
-  "stats": ["React 19", "Supabase", "OpenRouter"],
+  "order": 3,
+  "title": "Marko — Content OS",
+  "subtitle": "All-in-one social media command center for creators and agencies, with AI-powered workflow optimization.",
+  "about": "What is Marko?\n\nDigital creators and agencies lose hours every week jumping between TikTok drafts, Instagram notes, Google Docs, Notion boards, and native analytics dashboards — each platform siloed from the rest. Marko acts as a single command center, unifying the entire lifecycle of a post: from raw idea and scripting, to scheduling and cross-platform publishing, to final performance analytics. It is the content operating system built for creators who are serious about scaling.",
+  "image": "/project_images/marko_hero.jpg",
+  "stats": [
+    "Next.js 15",
+    "Supabase",
+    "Framer Motion"
+  ],
   "liveDemo": "https://trymarkomx.vercel.app",
   "challenge": {
-    "title": "The Challenge: Manual data chaos in content delivery",
-    "description": "Scaling content creation teams requires tight review loops. Managing raw footage approvals, script versions, and finals across fragmented channels caused missed deadlines.",
+    "title": "The Challenge: Fragmented workflows killing creative momentum",
+    "description": "Professional content creators and agencies manage TikTok, Instagram, YouTube, LinkedIn, and Facebook simultaneously. Without a centralized system, content ideas get lost, publishing schedules drift, and performance data lives across six different native dashboards — making it impossible to see the full picture or iterate fast.",
     "cards": [
-      { "title": "Desynced Teams", "description": "Editors and Producers lacked a unified temporal view of project progress." },
-      { "title": "Lost Assets", "description": "Digging through 100s of gigabytes of raw video files to find B-Roll costs hours." },
-      { "title": "Slow Iteration", "description": "Manual transcription and tagging workflows were entirely unscalable." }
+      {
+        "title": "Scattered Content Pipelines",
+        "description": "Scripts lived in Google Docs, ideas in Notion, drafts in native apps, and analytics in each platform's own dashboard — zero single source of truth."
+      },
+      {
+        "title": "Zero Cross-Platform Visibility",
+        "description": "Creators had no unified view of their publishing schedule or audience growth across TikTok, Instagram, and YouTube at once."
+      },
+      {
+        "title": "Blank Page Paralysis",
+        "description": "Without a system to capture and resurface saved inspiration, creators burned time staring at a blank page instead of producing content."
+      }
     ]
   },
   "solution": {
-    "title": "Our Solution: AI-First Asset Infrastructure",
-    "description": "We centralized the entire workflow, replacing manual folders with a completely synced temporal database paired with LLM agents.",
+    "title": "Our Solution: A Unified Content Command Center",
+    "description": "Marko centralizes every stage of the content workflow into a single high-fidelity web application — from saving a piece of inspiration in the Vault, to drafting a script, composing a post with a live mobile preview, scheduling it on the visual calendar, and analyzing its performance in a unified analytics dashboard.",
     "features": [
-      { "title": "Semantic Video Search", "description": "Deep integrations with OpenRouter and Qwen allow editors to search for content naturally." },
-      { "title": "Real-time Synchronization", "description": "Changes propagate to all connected clients instantly via Supabase WebSockets." },
-      { "title": "Multi-platform Composer", "description": "Unified dashboard to draft and preview content across multiple target social algorithms." }
+      {
+        "title": "Visual Content Calendar",
+        "description": "A bird's-eye editorial calendar to plan, organize, and schedule posts across TikTok, Instagram, YouTube, LinkedIn, and Facebook from a single view."
+      },
+      {
+        "title": "Inspiration Vault",
+        "description": "A personal media database where creators save videos, images, and references. Marko AI ingests this vault to proactively suggest future content ideas aligned with the creator's unique style."
+      },
+      {
+        "title": "High-Fidelity Composer",
+        "description": "A multi-pane post editor with real-time mobile previews, ensuring content looks pixel-perfect across each platform's format before going live."
+      }
     ]
   },
   "techStack": {
-    "title": "Our Tech-Stack: AI & Edge Compute",
-    "description": "Leveraging cutting edge models to handle vast amounts of unstructured text and video heuristics.",
+    "title": "Our Tech Stack: Modern Edge-First Web",
+    "description": "Built for speed, real-time collaboration, and a premium feel — every architectural decision in Marko prioritizes developer velocity and a consumer-grade end-user experience.",
     "categories": [
-      { "name": "AI Orchestration", "description": "OpenRouter aggregating LLM calls with optimized latency bridging to Qwen for complex reasoning tasks." },
-      { "name": "Backend", "description": "Supabase delivering edge-ready auth, instantaneous realtime database sync, and deep bucket storage." }
+      {
+        "name": "Frontend",
+        "description": "Next.js 15 App Router with TypeScript and Tailwind CSS for a performant, type-safe UI with native-app-level responsiveness. Framer Motion (motion/react) drives all micro-interactions and page transitions."
+      },
+      {
+        "name": "Backend & Auth",
+        "description": "Supabase powers Row Level Security auth, a Postgres database, real-time subscriptions for live updates, and bucket storage for media assets — all managed through a single edge-ready SDK."
+      },
+      {
+        "name": "AI Layer",
+        "description": "Marko AI acts as an embedded creative partner, analyzing saved Vault references and engagement history to recommend optimal posting times, content structures, and daily ideation prompts."
+      }
     ]
   },
   "results": [
-    { "title": "Instant Semantic Retrieval", "description": "Reduced search times for old assets from hours to sub-seconds." },
-    { "title": "Unified Operations", "description": "Brought the entire publishing lifecycle into a single centralized web application." }
+    {
+      "title": "Full Lifecycle in One Tab",
+      "description": "Replaced 6+ fragmented tools (Notion, Google Docs, native analytics, scheduling apps) with a single unified platform covering ideation, scripting, composing, scheduling, and analytics."
+    },
+    {
+      "title": "Unified Cross-Platform Analytics",
+      "description": "Creators can track reach, engagement rate, follower growth, and top-performing posts across all connected platforms in a single high-fidelity dashboard with platform-specific filtering."
+    },
+    {
+      "title": "AI-Driven Content Cadence",
+      "description": "Marko AI surfaces daily content recommendations based on Vault history and audience behavior, eliminating blank-page paralysis and keeping publishing schedules consistent."
+    }
   ],
   "gallery": [
-    "https://picsum.photos/seed/marko2/1200/800"
+    "/project_images/marko_analytics.jpg",
+    "/project_images/marko_calendar.jpg",
+    "/project_images/marko_post.jpg",
+    "/project_images/marko_scripts.jpg",
+    "/project_images/marko_full_main.jpg"
   ]
 }

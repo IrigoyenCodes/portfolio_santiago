@@ -1,46 +1,97 @@
 {
   "slug": "que-hay-puebla",
-  "order": 1,
+  "order": 2,
   "title": "QUE HAY PUEBLA",
-  "subtitle": "Scalable B2B SaaS platform for business discovery with end-to-end automation from onboarding to subscriptions.",
-  "about": "What is QUE HAY PUEBLA?\n\nSmall businesses need an accessible physical footprint online. This geographic SaaS allows local stores without websites to exist on a highly optimized mapping engine, processing discovery and regional clustering while handling subscription monetization.",
-  "image": "https://picsum.photos/seed/quehay1/1200/800",
-  "stats": ["Next.js", "PostgreSQL", "Stripe", "Leaflet"],
+  "subtitle": "Full-stack B2B SaaS directory platform with tiered subscriptions, interactive zone mapping, and a fully automated billing lifecycle.",
+  "about": "What is QUE HAY PUEBLA?\n\nPuebla's small businesses — restaurants, cafés, shops, and services — have no dedicated digital infrastructure. QueHay Puebla fills that gap with a geo-segmented discovery platform where business owners self-onboard, choose a subscription tier, and gain immediate access to an analytics dashboard tracking every customer interaction. The platform is built to scale across Mexico's mid-sized cities with zero operational overhead per new business added.",
+  "image": "/project_images/que_hay_puebla_hero.png",
+  "stats": [
+    "Next.js 15",
+    "Stripe",
+    "PostgreSQL",
+    "NextAuth.js v5"
+  ],
   "liveDemo": "https://www.quehaypuebla.com.mx",
   "challenge": {
-    "title": "The Challenge: Fragmented discovery and manual onboarding",
-    "description": "Before this platform, small businesses relied on fragmented social media posting or expensive bespoke websites. Scaling a local directory was blocked by manual approval hurdles.",
+    "title": "The Challenge: No Digital Infrastructure for Local Commerce",
+    "description": "Local businesses in mid-sized Mexican cities lack the tools, budget, and technical skill to maintain an online presence. A platform serving them had to be friction-free for non-technical owners, financially sustainable through subscriptions, and resilient enough to handle geographic expansion without engineering intervention.",
     "cards": [
-      { "title": "Efficiency Killer", "description": "Data collection for business locations and hours was managed over manual emails and spreadsheets." },
-      { "title": "Lack of Transparency", "description": "End users had no real-time overview of active businesses in their specific neighborhood zones." },
-      { "title": "High Error Risk", "description": "Manual verification of business statuses and subscription payments created bottlenecks." }
+      {
+        "title": "Discovery Gap",
+        "description": "120,000+ businesses in Puebla's metro area had no dedicated local search layer — consumers relied on fragmented WhatsApp groups and word-of-mouth."
+      },
+      {
+        "title": "Manual Onboarding Bottleneck",
+        "description": "Any directory requiring manual admin entry per business cannot scale. The platform needed self-service onboarding with automated approval and billing activation."
+      },
+      {
+        "title": "Monetization Without Friction",
+        "description": "Charging small businesses requires trust. The system needed transparent tier-based pricing, free trials, and a self-managed billing portal — all without a sales call."
+      }
     ]
   },
   "solution": {
-    "title": "Our Solution: A highly automated geographic infrastructure",
-    "description": "We evolved the concept from a simple directory into a market-ready platform that centralizes and automates the entire process — from data capture to recurring billing.",
+    "title": "The Solution: A Self-Operating Geographic SaaS",
+    "description": "The platform handles the full lifecycle autonomously — from a business owner's first registration to their Stripe subscription renewal — while exposing analytics, media management, and tier-gated features through a clean role-based dashboard.",
     "features": [
-      { "title": "Interactive Mapping System", "description": "Users can seamlessly filter through 8 distinct city zones with live-rendered map coordinates." },
-      { "title": "Multi-tenant Architecture", "description": "We built a robust RBAC (Role-Based Access Control) system securing business owner dashboards." },
-      { "title": "Automated Background Engine", "description": "Automated webhook listening for Stripe ensures instant activation or revocation of premium listings." },
-      { "title": "Self-Service Portal", "description": "Business clients get completely transparent access to upload their own imagery and track metrics." }
+      {
+        "title": "4-Tier Subscription Engine",
+        "description": "Stripe-powered tiers (Starter free, PRO $299, ELITE $599, PATROCINADOR $999 MXN/mo) with 7-day trials, annual billing discounts, and a self-service Customer Portal for upgrades and cancellations."
+      },
+      {
+        "title": "Zone-Based Interactive Map",
+        "description": "Leaflet map with real-time clustering across 8 city zones. Business pins are visually differentiated by tier, and a Haversine-based distance filter sorts results by proximity."
+      },
+      {
+        "title": "Tier-Gated Feature System",
+        "description": "A centralized tierLimits config gates every feature — photo limits, analytics frequency, delivery links, Instagram mentions, and the 'Sorpréndeme' random-discovery engine — by subscription level."
+      },
+      {
+        "title": "Real-Time Analytics Dashboard",
+        "description": "Tracks VIEW, CLICK_PHONE, CLICK_WHATSAPP, CLICK_WEBSITE, CLICK_DIRECTIONS, and SHARE events per business with frequency scaled to subscription tier (daily for Patrocinador, weekly for Elite, monthly for Pro)."
+      }
     ]
   },
   "techStack": {
-    "title": "Our Tech-Stack: Performance & Security",
-    "description": "To manage sensitive user data and provide high-speed map tile rendering, we rely on a modern Fullstack setup:",
+    "title": "Technical Depth: Architecture & Infrastructure",
+    "description": "Built as a production-grade Next.js 15 App Router application with server actions, edge middleware, and a multi-provider auth layer on top of a relational database.",
     "categories": [
-      { "name": "Frontend", "description": "Next.js (React) for bleeding-edge rendering speeds, combined with Tailwind CSS for an atomic styling approach." },
-      { "name": "Data Model", "description": "PostgreSQL structured via Prisma ORM allowing complex relational queries across thousands of location nodes." }
+      {
+        "name": "Full-Stack Framework",
+        "description": "Next.js 15 App Router with React Server Components and Server Actions. Middleware protects all /panel routes with JWT session validation via NextAuth.js v5."
+      },
+      {
+        "name": "Auth & RBAC",
+        "description": "NextAuth.js v5 with three providers: Google OAuth, Facebook OAuth, and Email/Password (bcryptjs). Three roles: CONSUMER, BUSINESS_OWNER, ADMIN — enforced at the middleware and API layer."
+      },
+      {
+        "name": "Billing Infrastructure",
+        "description": "Stripe Checkout Sessions, webhook listeners for subscription lifecycle events, and the Customer Billing Portal. Trial periods and tier changes are handled entirely via webhook processing."
+      },
+      {
+        "name": "Security & Rate Limiting",
+        "description": "Upstash Redis-backed rate limiting with three profiles: strict (5 req/min for auth), standard (20 req/min for mutations), and relaxed (100 req/min for reads). All inputs validated with Zod."
+      }
     ]
   },
   "results": [
-    { "title": "100+ active businesses", "description": "are already relying on the platform for their digital presence." },
-    { "title": "Thousands of map queries", "description": "processed flawlessly during peak weekend discovery hours." },
-    { "title": "Complete Automation", "description": "Zero administrative overhead required for new business onboarding and subscription tier changes." }
+    {
+      "title": "Zero admin overhead",
+      "description": "per new business. Onboarding, approval, subscription activation, and analytics are fully automated end-to-end."
+    },
+    {
+      "title": "Full billing lifecycle automated",
+      "description": "Stripe webhooks handle trial starts, upgrades, downgrades, and cancellations with instant tier enforcement across the platform."
+    },
+    {
+      "title": "Production SEO infrastructure",
+      "description": "Dynamic sitemap, Schema.org LocalBusiness JSON-LD, Open Graph tags, and an llms.txt file for AI agent discoverability — all generated server-side per business slug."
+    }
   ],
   "gallery": [
-    "https://picsum.photos/seed/quehay2/1200/800",
-    "https://picsum.photos/seed/quehay3/1200/800"
+    "/project_images/que_hay_puebla_zones.png",
+    "/project_images/que_hay_puebla_lomas.png",
+    "/project_images/que_hay_puebla_restaurant.png",
+    "/project_images/que_hay_puebla_full_main.png"
   ]
 }
