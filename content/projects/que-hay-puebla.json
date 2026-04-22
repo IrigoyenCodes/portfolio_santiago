@@ -1,0 +1,46 @@
+{
+  "slug": "que-hay-puebla",
+  "order": 1,
+  "title": "QUE HAY PUEBLA",
+  "subtitle": "Scalable B2B SaaS platform for business discovery with end-to-end automation from onboarding to subscriptions.",
+  "about": "What is QUE HAY PUEBLA?\n\nSmall businesses need an accessible physical footprint online. This geographic SaaS allows local stores without websites to exist on a highly optimized mapping engine, processing discovery and regional clustering while handling subscription monetization.",
+  "image": "https://picsum.photos/seed/quehay1/1200/800",
+  "stats": ["Next.js", "PostgreSQL", "Stripe", "Leaflet"],
+  "liveDemo": "https://www.quehaypuebla.com.mx",
+  "challenge": {
+    "title": "The Challenge: Fragmented discovery and manual onboarding",
+    "description": "Before this platform, small businesses relied on fragmented social media posting or expensive bespoke websites. Scaling a local directory was blocked by manual approval hurdles.",
+    "cards": [
+      { "title": "Efficiency Killer", "description": "Data collection for business locations and hours was managed over manual emails and spreadsheets." },
+      { "title": "Lack of Transparency", "description": "End users had no real-time overview of active businesses in their specific neighborhood zones." },
+      { "title": "High Error Risk", "description": "Manual verification of business statuses and subscription payments created bottlenecks." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution: A highly automated geographic infrastructure",
+    "description": "We evolved the concept from a simple directory into a market-ready platform that centralizes and automates the entire process — from data capture to recurring billing.",
+    "features": [
+      { "title": "Interactive Mapping System", "description": "Users can seamlessly filter through 8 distinct city zones with live-rendered map coordinates." },
+      { "title": "Multi-tenant Architecture", "description": "We built a robust RBAC (Role-Based Access Control) system securing business owner dashboards." },
+      { "title": "Automated Background Engine", "description": "Automated webhook listening for Stripe ensures instant activation or revocation of premium listings." },
+      { "title": "Self-Service Portal", "description": "Business clients get completely transparent access to upload their own imagery and track metrics." }
+    ]
+  },
+  "techStack": {
+    "title": "Our Tech-Stack: Performance & Security",
+    "description": "To manage sensitive user data and provide high-speed map tile rendering, we rely on a modern Fullstack setup:",
+    "categories": [
+      { "name": "Frontend", "description": "Next.js (React) for bleeding-edge rendering speeds, combined with Tailwind CSS for an atomic styling approach." },
+      { "name": "Data Model", "description": "PostgreSQL structured via Prisma ORM allowing complex relational queries across thousands of location nodes." }
+    ]
+  },
+  "results": [
+    { "title": "100+ active businesses", "description": "are already relying on the platform for their digital presence." },
+    { "title": "Thousands of map queries", "description": "processed flawlessly during peak weekend discovery hours." },
+    { "title": "Complete Automation", "description": "Zero administrative overhead required for new business onboarding and subscription tier changes." }
+  ],
+  "gallery": [
+    "https://picsum.photos/seed/quehay2/1200/800",
+    "https://picsum.photos/seed/quehay3/1200/800"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "nba-stats-predictor",
+  "order": 3,
+  "title": "NBA Stats Predictor",
+  "subtitle": "High-accuracy Machine Learning pipeline forecasting sports outcomes.",
+  "about": "What is the NBA Stats Predictor?\n\nA data-science-first application that ingests massive live APIs to feed a Random Forest machine learning model capable of generating highly accurate game likelihood predictions.",
+  "image": "https://picsum.photos/seed/nbastats1/1200/800",
+  "stats": ["Python", "Scikit", "MySQL", "Pandas"],
+  "gallery": ["https://picsum.photos/seed/nbastats2/1200/800"],
+  "challenge": {
+    "title": "The Challenge: Extremely noisy and vast data sources",
+    "description": "Sports data is notoriously dense. Scraping, cleaning, and formatting player efficiency heuristics in real-time posed a massive infrastructure hurdle.",
+    "cards": [
+      { "title": "Data Velocity", "description": "Handling thousands of live stat updates concurrent with ongoing games." },
+      { "title": "Noisy Metrics", "description": "Filtering out irrelevant variables that caused overfitting in legacy models." },
+      { "title": "Visualization Gap", "description": "Raw JSON outputs were completely unreadable for standard end-users." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution: Automated Data Extraction & ML Inference",
+    "description": "Built a fully autonomous pipeline from cron-based API retrievals directly into model inference, visualized by a clean frontend.",
+    "features": [
+      { "title": "ETL Pipeline", "description": "Automated extraction and deep cleaning via Python/Pandas workflows." },
+      { "title": "Predictive Engines", "description": "Random forest model trained on decades of historic records parsing advanced team metrics." },
+      { "title": "Live Dashboards", "description": "Frontend visualization layer overlaying live active games with calculated confidence bands." }
+    ]
+  },
+  "techStack": {
+    "title": "Our Tech-Stack: Python Ecosystem",
+    "description": "Heavy reliance on industry-standard data science infrastructure.",
+    "categories": [
+      { "name": "ML Architecture", "description": "Scikit-Learn handling complex random-forest modeling and pipeline execution." },
+      { "name": "Data Tier", "description": "MySQL handling strongly-typed structured relational data for optimal ML ingestion speeds." }
+    ]
+  },
+  "results": [
+    { "title": "85% Accuracy Target", "description": "Consistently forecasting outcomes correctly via aggressive algorithmic optimization." },
+    { "title": "Zero-Touch execution", "description": "Pipelines run fully automated without developer intervention." }
+  ]
+}

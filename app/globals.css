@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Smooth scrolling for all anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Matches the preloader to prevent flash */
+  background-color: #000000;
+}
+
+/* Background dot-grid pattern used across bento and project cards */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Scrollbar hiding — used by the horizontal project carousel */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

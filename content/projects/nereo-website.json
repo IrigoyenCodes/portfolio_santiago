@@ -1,0 +1,39 @@
+{
+  "slug": "nereo-website",
+  "order": 4,
+  "title": "Nereo Website",
+  "subtitle": "High-performance brand presence maximizing conversion through fluid UI physics.",
+  "about": "What is Nereo?\n\nA digital storefront and brand identity requiring absolute frontend perfection. It represents a pivot from static templates to bespoke, heavily animated web experiences.",
+  "image": "https://picsum.photos/seed/nereo/1200/800",
+  "stats": ["React", "Tailwind CSS", "Framer Motion"],
+  "liveDemo": "https://nereo.example.com",
+  "gallery": [],
+  "challenge": {
+    "title": "The Challenge: Bland legacy web presence",
+    "description": "The previous iteration lacked brand identity, suffered from poor load times, and failed to capture user attention resulting in high bounce rates.",
+    "cards": [
+      { "title": "High Bounce Rate", "description": "Users were leaving the site within seconds due to unengaging layouts." },
+      { "title": "Janky Animations", "description": "Legacy CSS animations were causing heavy layout shifts and performance drops." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution: Bespoke physics-driven interface",
+    "description": "A ground-up rewrite prioritizing GPU-accelerated compositing and incredibly precise design-system tokenization.",
+    "features": [
+      { "title": "Scroll-Triggered Physics", "description": "Elements inherently react to user scroll velocity and viewport intersection." },
+      { "title": "Atomic Design System", "description": "Tailwind utilized to ensure ultra-low CSS payload and rapid iteration." }
+    ]
+  },
+  "techStack": {
+    "title": "Our Tech-Stack: The Modern Web",
+    "description": "Focused completely on frontend edge-delivery mechanisms.",
+    "categories": [
+      { "name": "Animation Layer", "description": "Framer Motion executing complex spring physics directly in the DOM." },
+      { "name": "UI Framework", "description": "React 19 ensuring concurrent rendering doesn't drop layout frames." }
+    ]
+  },
+  "results": [
+    { "title": "Lightning Fast Loads", "description": "Sub-second LCP (Largest Contentful Paint) metrics globally." },
+    { "title": "Increased Conversion", "description": "Massively improved time-on-site thanks to engaging interactive elements." }
+  ]
+}

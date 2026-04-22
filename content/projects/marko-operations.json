@@ -1,0 +1,43 @@
+{
+  "slug": "marko-operations",
+  "order": 2,
+  "title": "MARKO Operations",
+  "subtitle": "Centralized content operations platform with AI-powered semantic retrieval.",
+  "about": "What is MARKO?\n\nDigital creators and agencies suffer from scattered assets across cloud drives, notion boards, and messaging apps. MARKO acts as a single pane of glass aggregating media workflows.",
+  "image": "https://picsum.photos/seed/marko1/1200/800",
+  "stats": ["React 19", "Supabase", "OpenRouter"],
+  "liveDemo": "https://trymarkomx.vercel.app",
+  "challenge": {
+    "title": "The Challenge: Manual data chaos in content delivery",
+    "description": "Scaling content creation teams requires tight review loops. Managing raw footage approvals, script versions, and finals across fragmented channels caused missed deadlines.",
+    "cards": [
+      { "title": "Desynced Teams", "description": "Editors and Producers lacked a unified temporal view of project progress." },
+      { "title": "Lost Assets", "description": "Digging through 100s of gigabytes of raw video files to find B-Roll costs hours." },
+      { "title": "Slow Iteration", "description": "Manual transcription and tagging workflows were entirely unscalable." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution: AI-First Asset Infrastructure",
+    "description": "We centralized the entire workflow, replacing manual folders with a completely synced temporal database paired with LLM agents.",
+    "features": [
+      { "title": "Semantic Video Search", "description": "Deep integrations with OpenRouter and Qwen allow editors to search for content naturally." },
+      { "title": "Real-time Synchronization", "description": "Changes propagate to all connected clients instantly via Supabase WebSockets." },
+      { "title": "Multi-platform Composer", "description": "Unified dashboard to draft and preview content across multiple target social algorithms." }
+    ]
+  },
+  "techStack": {
+    "title": "Our Tech-Stack: AI & Edge Compute",
+    "description": "Leveraging cutting edge models to handle vast amounts of unstructured text and video heuristics.",
+    "categories": [
+      { "name": "AI Orchestration", "description": "OpenRouter aggregating LLM calls with optimized latency bridging to Qwen for complex reasoning tasks." },
+      { "name": "Backend", "description": "Supabase delivering edge-ready auth, instantaneous realtime database sync, and deep bucket storage." }
+    ]
+  },
+  "results": [
+    { "title": "Instant Semantic Retrieval", "description": "Reduced search times for old assets from hours to sub-seconds." },
+    { "title": "Unified Operations", "description": "Brought the entire publishing lifecycle into a single centralized web application." }
+  ],
+  "gallery": [
+    "https://picsum.photos/seed/marko2/1200/800"
+  ]
+}

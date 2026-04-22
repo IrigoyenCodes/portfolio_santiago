@@ -1,0 +1,38 @@
+{
+  "slug": "kor-activewear",
+  "order": 5,
+  "title": "KOR Activewear",
+  "subtitle": "Custom e-commerce infrastructure circumventing slow legacy storefronts.",
+  "about": "What is KOR Activewear?\n\nA rapidly scaling apparel brand needing a storefront capability exceeding standard Shopify template limitations, requiring deeply integrated headless operations.",
+  "image": "https://picsum.photos/seed/kor/1200/800",
+  "stats": ["Next.js", "E-commerce APIs", "Tailwind"],
+  "gallery": [],
+  "challenge": {
+    "title": "The Challenge: Monolithic E-Commerce Limitations",
+    "description": "Existing platforms strictly locked down customization, leading to poor brand expression and sluggish checkout waterfalls.",
+    "cards": [
+      { "title": "Rigid Architectures", "description": "Unable to implement custom inventory tracking or split-payment logic." },
+      { "title": "Poor SEO", "description": "Heavy monolith footprints tanked core web vitals." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution: Headless API Integrations",
+    "description": "Decoupled the frontend visual layer entirely from the backend payment and inventory mechanics.",
+    "features": [
+      { "title": "Server-Side Generation", "description": "Blazing fast product pages pre-rendered directly on edge networks." },
+      { "title": "Custom Cart State", "description": "Flawless, optimistic cart updates allowing users to add/remove instantly." }
+    ]
+  },
+  "techStack": {
+    "title": "Our Tech-Stack: Edge E-Commerce",
+    "description": "Scalable stacks designed for Black Friday traffic spikes.",
+    "categories": [
+      { "name": "Framework", "description": "Next.js providing edge-routing, SSG, and ISR for real-time inventory adjustments." },
+      { "name": "Integrations", "description": "Deep REST integrations with fulfillment and payment processors." }
+    ]
+  },
+  "results": [
+    { "title": "Optimized Checkouts", "description": "Cart abandonment dropped drastically with faster optimistic UI states." },
+    { "title": "Bespoke Branding", "description": "Unshackled from themes, the site accurately reflects high-end aesthetic goals." }
+  ]
+}

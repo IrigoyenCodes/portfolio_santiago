@@ -1,0 +1,40 @@
+{
+  "slug": "udlap-document-extractor",
+  "order": 7,
+  "title": "UDLAP Document Extractor",
+  "subtitle": "Intelligent OCR and full-stack document processing system reducing manual workloads by 80%.",
+  "about": "What is the Document Extractor?\n\nAn internal AI platform built for the UDLAP IT department designed to automate the recognition, classification, and data extraction of various institutional documents seamlessly via advanced vision-language models.",
+  "image": "https://picsum.photos/seed/udlap1/1200/800",
+  "stats": ["React", "TypeScript", "OpenRouter", "Qwen3"],
+  "gallery": [],
+  "challenge": {
+    "title": "The Challenge: Manual Administrative Processing",
+    "description": "Scaling administrative workflows was bottlenecked by slow, manual data entry leading to operational delays.",
+    "cards": [
+      { "title": "Time Intensive", "description": "Manual extraction of hundreds of fields took thousands of hours per month." },
+      { "title": "High Error Rate", "description": "Fatigue-driven typographical errors broke downstream administrative integrations." },
+      { "title": "Unstructured Data", "description": "Traditional bounded OCR failed drastically on highly unstructured institutional document layouts." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution: Vision-Language Pipeline",
+    "description": "Engineered a robust AI pipeline leaning on specialized Vision Language Models to contextually parse full document layouts with extreme accuracy.",
+    "features": [
+      { "title": "Intelligent Extraction", "description": "Using Qwen3-VL-30B for complex field extraction directly from rasterized document images." },
+      { "title": "Batch Processing", "description": "Automated pipelines processing 50+ mixed documents in asynchronous batches." },
+      { "title": "Human-in-the-loop Interface", "description": "React and TypeScript frontend allowing IT staff to quickly review and approve extractions before sync." }
+    ]
+  },
+  "techStack": {
+    "title": "Our Tech-Stack: AI Vision & Modern Web",
+    "description": "Reliability paired with cutting-edge multimodal intelligence.",
+    "categories": [
+      { "name": "Frontend App", "description": "React and TypeScript delivering a typesafe, snappy validation interface." },
+      { "name": "AI Provider", "description": "OpenRouter orchestrating massive multimodal queries to Qwen3 models dynamically." }
+    ]
+  },
+  "results": [
+    { "title": "80% Time Reduction", "description": "Massive decrease in manual processing times for all integrated document templates." },
+    { "title": "Continuous Operations", "description": "Systematic error reductions ensuring university operations run without blockages." }
+  ]
+}
