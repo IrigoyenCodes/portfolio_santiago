@@ -15,12 +15,12 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-neutral-900 animate-pulse" />
         <Image
-          src="https://picsum.photos/seed/santiago_face_portrait/800/1200"
+          src="/project_images/santiago.jpg"
           alt="Santiago Irigoyen"
           fill
-          className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
+          className="object-cover object-center"
           referrerPolicy="no-referrer"
-          unoptimized
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-90" />
         <div className="absolute bottom-8 left-8 flex items-center gap-3">
@@ -45,7 +45,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-8 sm:items-start md:items-end justify-between text-neutral-200 mt-4"
         >
           <p className="text-lg md:text-xl max-w-md leading-relaxed font-medium">
-            I design and develop scalable web applications and intelligent AI pipelines. Automating workflows and bridging systems with modern stacks. 
+            I design and develop scalable web applications and intelligent AI pipelines. Automating workflows and bridging systems with modern stacks.
           </p>
           <a href="#projects" className="flex items-center gap-2 group hover:text-white transition-colors text-lg pt-4 shrink-0 pb-1 border-b border-transparent hover:border-white">
             View Projects <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

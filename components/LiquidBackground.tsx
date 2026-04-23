@@ -2,7 +2,26 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import { Gauge, Leaf, Zap } from 'lucide-react';
+import { Gauge, Leaf, Zap, Palette } from 'lucide-react';
+
+export type ColorMode = 'sunset' | 'aurora';
+
+export const COLOR_MODES: ColorMode[] = ['sunset', 'aurora'];
+
+export const COLOR_PALETTES: Record<ColorMode, { color1: THREE.Vector3; color2: THREE.Vector3; darkNavy: THREE.Vector3; label: string }> = {
+  sunset: {
+    label: 'Sunset',
+    color1: new THREE.Vector3(0.945, 0.353, 0.133),
+    color2: new THREE.Vector3(0.039, 0.055, 0.153),
+    darkNavy: new THREE.Vector3(0.039, 0.055, 0.153),
+  },
+  aurora: {
+    label: 'Aurora',
+    color1: new THREE.Vector3(0.545, 0.200, 0.900),
+    color2: new THREE.Vector3(0.000, 0.780, 0.670),
+    darkNavy: new THREE.Vector3(0.020, 0.012, 0.055),
+  }
+};
 
 // ─── Module-level classes ────────────────────────────────────────────────────
 // Defining these outside the React component prevents them from being
@@ -481,6 +500,23 @@ class App {
     this.update(clampedDelta);
   }
 
+  setColorMode(paletteMode: ColorMode) {
+    const palette = COLOR_PALETTES[paletteMode];
+    if (!palette) return;
+
+    const uniforms = this.gradientBackground.uniforms;
+    
+    (uniforms.uColor1.value as THREE.Vector3).copy(palette.color1);
+    (uniforms.uColor3.value as THREE.Vector3).copy(palette.color1);
+    (uniforms.uColor5.value as THREE.Vector3).copy(palette.color1);
+    
+    (uniforms.uColor2.value as THREE.Vector3).copy(palette.color2);
+    (uniforms.uColor4.value as THREE.Vector3).copy(palette.color2);
+    (uniforms.uColor6.value as THREE.Vector3).copy(palette.color2);
+    
+    (uniforms.uDarkNavy.value as THREE.Vector3).copy(palette.darkNavy);
+  }
+
   setPerformanceMode(mode: 'high' | 'eco' | 'off') {
     if (mode === 'off') {
       cancelAnimationFrame(this.animationFrameId);
@@ -539,6 +575,7 @@ export default function LiquidBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
   const appRef = useRef<App | null>(null);
   const [mode, setMode] = useState<PerfMode>('high');
+  const [colorMode, setColorMode] = useState<ColorMode>('sunset');
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -560,6 +597,12 @@ export default function LiquidBackground() {
     appRef.current?.setPerformanceMode(next);
   };
 
+  const cycleColorMode = () => {
+    const next = COLOR_MODES[(COLOR_MODES.indexOf(colorMode) + 1) % COLOR_MODES.length];
+    setColorMode(next);
+    appRef.current?.setColorMode(next);
+  };
+
   const icon = mode === 'high'
     ? <Gauge className="w-4 h-4" />
     : mode === 'eco'
@@ -574,16 +617,31 @@ export default function LiquidBackground() {
           mode === 'off' ? 'opacity-0' : 'opacity-100'
         }`}
       />
-      <button
-        onClick={cycleMode}
-        className="fixed bottom-6 left-6 md:bottom-8 md:left-8 z-50 px-4 py-2.5 rounded-full bg-neutral-900/80 backdrop-blur-md border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 transition-all shadow-lg flex items-center gap-2.5 group"
-        title={PERF_LABELS[mode].title}
-      >
-        {icon}
-        <span className="text-[11px] font-mono tracking-wider uppercase pt-[1px]">
-          {PERF_LABELS[mode].label}
-        </span>
-      </button>
+      <div className="fixed bottom-6 left-6 md:bottom-8 md:left-8 z-50 flex items-center bg-neutral-900/80 backdrop-blur-md border border-neutral-800 rounded-full shadow-lg p-1">
+        <button
+          onClick={cycleColorMode}
+          className="px-3 py-1.5 md:px-4 md:py-2 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800/50 transition-all flex items-center gap-2.5 group whitespace-nowrap"
+          title="Change Color Theme"
+        >
+          <Palette className="w-4 h-4 group-hover:text-indigo-400 transition-colors" />
+          <span className="text-[11px] font-mono tracking-wider uppercase pt-[1px] hidden sm:block">
+            {COLOR_PALETTES[colorMode].label}
+          </span>
+        </button>
+
+        <div className="w-[1px] h-4 bg-neutral-800 mx-1"></div>
+
+        <button
+          onClick={cycleMode}
+          className="px-3 py-1.5 md:px-4 md:py-2 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800/50 transition-all flex items-center gap-2.5 group whitespace-nowrap"
+          title={PERF_LABELS[mode].title}
+        >
+          {icon}
+          <span className="text-[11px] font-mono tracking-wider uppercase pt-[1px] hidden sm:block">
+            {PERF_LABELS[mode].label}
+          </span>
+        </button>
+      </div>
     </>
   );
 }

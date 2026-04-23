@@ -87,7 +87,6 @@ export default function Projects({ projects }: ProjectsProps) {
                         fill
                         className="object-cover object-top"
                         referrerPolicy="no-referrer"
-                        unoptimized
                       />
                     </div>
 

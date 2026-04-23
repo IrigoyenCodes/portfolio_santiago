@@ -84,7 +84,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </aside>
 
           {/* Main Content Area */}
-          <div className="flex-1 flex flex-col gap-24 lg:border-l lg:border-neutral-800 lg:pl-16 xl:pl-24">
+          <div className="flex-1 flex flex-col gap-24 bg-black/40 backdrop-blur-xl rounded-[2.5rem] border border-white/10 shadow-2xl p-6 md:p-12 lg:p-16 relative overflow-hidden">
 
             {/* Header Section */}
             <section className="flex flex-col gap-6">
@@ -109,7 +109,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     height={900}
                     className="object-contain w-full h-auto"
                     referrerPolicy="no-referrer"
-                    unoptimized
                   />
                 </div>
               </section>
@@ -130,7 +129,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
               {project.challenge.image && (
                 <div className="w-full aspect-video sm:aspect-[21/9] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-lg">
-                  <Image src={project.challenge.image} alt="Challenge context" fill className="object-cover" unoptimized referrerPolicy="no-referrer" />
+                  <Image src={project.challenge.image} alt="Challenge context" fill className="object-cover" referrerPolicy="no-referrer" />
                 </div>
               )}
 
@@ -160,7 +159,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
               {project.solution.image && (
                 <div className="w-full aspect-video sm:aspect-[21/9] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-lg">
-                  <Image src={project.solution.image} alt="Solution context" fill className="object-cover object-top" unoptimized referrerPolicy="no-referrer" />
+                  <Image src={project.solution.image} alt="Solution context" fill className="object-cover object-top" referrerPolicy="no-referrer" />
                 </div>
               )}
 
@@ -193,7 +192,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
               {project.techStack.image && (
                 <div className="w-full aspect-video sm:aspect-[21/9] bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden relative shadow-lg">
-                  <Image src={project.techStack.image} alt="Tech Stack diagram" fill className="object-cover" unoptimized referrerPolicy="no-referrer" />
+                  <Image src={project.techStack.image} alt="Tech Stack diagram" fill className="object-cover" referrerPolicy="no-referrer" />
                 </div>
               )}
 
@@ -244,7 +243,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         height={900}
                         className="object-contain w-full h-auto"
                         referrerPolicy="no-referrer"
-                        unoptimized
                       />
                     </div>
                   ))}
