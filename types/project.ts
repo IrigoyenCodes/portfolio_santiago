@@ -1,4 +1,6 @@
 /** Shared type for a project entry. Consumed by server helpers and client components via props. */
+export type GalleryItem = string | { src: string; title?: string; description?: string };
+
 export type ProjectDetails = {
   slug: string;
   order: number; // controls display order in the Projects carousel
@@ -25,7 +27,7 @@ export type ProjectDetails = {
   };
   results: { title: string; description: string }[];
   image: string;
-  gallery: string[];
+  gallery: GalleryItem[];
   stats: string[];
   liveDemo?: string;
 };

@@ -1,0 +1,114 @@
+{
+  "slug": "atlas-crm",
+  "order": 1,
+  "title": "Atlas",
+  "subtitle": "AI setter for content creators. Replies on Instagram, WhatsApp and TikTok in the creator's own voice, qualifies the lead, and hands it to a closer ready to book.",
+  "about": "What is Atlas?\n\nContent creators lose money inside their DMs every day. The volume is too high, the replies are too slow, and most of the real leads never make it to a call. Atlas is the AI setter that reads every inbox the creator has — Instagram, WhatsApp, TikTok — and replies in the creator's own voice, tone and style, including voice notes and video. It runs the full qualification flow, keeps the follow-ups going, and only hands a lead to the closer team once it's actually ready to move.\n\nSo far it has helped creators generate over $400,000 USD in bookings and saved them more than $10,000 USD a month that used to go to human setter teams.",
+  "image": "/project_images/atlas_hero.webp",
+  "stats": [
+    "Next.js",
+    "Supabase",
+    "WhatsApp API",
+    "Meta Business Partner"
+  ],
+  "liveDemo": "https://hyatlas.ai",
+  "gallery": [
+    {
+      "src": "/project_images/atlas_dashboard.webp",
+      "title": "Dashboard",
+      "description": "The team's one view of the funnel. Calls booked, conversations started, qualified leads, cash collected, show-up rate and close rate — plus where the funnel is leaking that period."
+    },
+    {
+      "src": "/project_images/atlas_conversations.webp",
+      "title": "Conversations",
+      "description": "Lead list, chat and lead card in one screen. The right-side Ficha carries the qualification criteria and the AI analysis of each lead, so the closer picks up a warm conversation instead of a cold one."
+    },
+    {
+      "src": "/project_images/atlas_calendar.webp",
+      "title": "Opportunities",
+      "description": "Team calendar for every call Atlas booked, split by closer. Filter by closer, status and date range to review one person's work or the whole team at once."
+    },
+    {
+      "src": "/project_images/atlas_ctas.webp",
+      "title": "CTAs and Flows",
+      "description": "Every CTA (Reels, posts, outbound, follower triggers) tracked with its own leads, conversations, pitches, won deals and conversion rates. Toggle them on and off without touching code."
+    },
+    {
+      "src": "/project_images/atlas_full.webp",
+      "title": "Landing page",
+      "description": "The hyatlas.ai sales site. The whole pitch, from the hook to the pricing comparison."
+    }
+  ],
+  "challenge": {
+    "title": "The problem: money dying inside the DMs",
+    "description": "Creators doing six or seven figures a year run into the same wall. The inbox grows faster than they can hire for it, replies happen hours late, and the funnel leaks everywhere between a DM and a call.",
+    "cards": [
+      {
+        "title": "Three inboxes, one person",
+        "description": "Instagram, WhatsApp and TikTok all have their own apps, their own quirks, and none of them talk to each other."
+      },
+      {
+        "title": "Human setters are expensive",
+        "description": "A setter team runs $8k to $15k a month, needs training, and still can't cover the whole day."
+      },
+      {
+        "title": "Leads reach the closer cold",
+        "description": "By the time a lead gets a call booked, nobody remembers what they actually wanted."
+      }
+    ]
+  },
+  "solution": {
+    "title": "The solution: an AI setter that sounds like you",
+    "description": "Atlas handles the full conversation in the creator's own voice, tone and style — text, voice notes, and video — then books the call with the right closer at the right time.",
+    "features": [
+      {
+        "title": "Replies in the creator's voice",
+        "description": "Trained on the creator's own messages so it sounds like them, not like a bot. Text, voice notes and video out of the box."
+      },
+      {
+        "title": "Relentless follow-ups",
+        "description": "The leads that go dark are the ones that normally get lost. Atlas keeps the follow-up cadence running without the setter forgetting."
+      },
+      {
+        "title": "Closers get warm leads",
+        "description": "When a call lands on a closer's calendar, the full context, qualification answers and conversation history come with it."
+      },
+      {
+        "title": "Full funnel visibility",
+        "description": "One dashboard for the creator and the team: response rate, booking rate, pipeline by closer, where leads drop off."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "How it's built",
+    "description": "Next.js on the front, Supabase and Postgres on the back, with workers consuming webhooks from the real messaging APIs.",
+    "categories": [
+      {
+        "name": "Frontend",
+        "description": "Next.js App Router with TypeScript and Tailwind. One dashboard for the creator and the closer team."
+      },
+      {
+        "name": "Backend",
+        "description": "Supabase (Postgres + auth + storage), with worker processes consuming webhooks from WhatsApp Business, the Instagram Graph API, and TikTok Business Messaging. Meta Business Partner integration."
+      },
+      {
+        "name": "AI layer",
+        "description": "Model-agnostic agent that follows the creator's playbook and trains per account on their past conversations, voice notes and video style."
+      }
+    ]
+  },
+  "results": [
+    {
+      "title": "$400k+ generated for clients",
+      "description": "Bookings closed by creator teams that came through the Atlas inbox."
+    },
+    {
+      "title": "$10k+/month saved",
+      "description": "Clients cut their human setter payroll after rolling out Atlas across their channels."
+    },
+    {
+      "title": "A 5% lift that pays for itself many times over",
+      "description": "On a $100k funnel, a 5% booking-rate lift is $62,500 more revenue. That's the whole pitch."
+    }
+  ]
+}

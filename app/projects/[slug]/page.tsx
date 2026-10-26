@@ -234,18 +234,31 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
               {project.gallery.length > 0 && (
                 <div className="flex flex-col gap-8 mt-8">
-                  {project.gallery.map((img, idx) => (
-                    <div key={idx} className="w-full max-w-3xl bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden shadow-xl">
-                      <Image
-                        src={img}
-                        alt={`${project.title} screenshot ${idx + 1}`}
-                        width={1200}
-                        height={900}
-                        className="object-contain w-full h-auto"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                  ))}
+                  {project.gallery.map((item, idx) => {
+                    const img = typeof item === 'string' ? { src: item } : item;
+                    return (
+                      <div key={idx} className="w-full max-w-3xl flex flex-col gap-3">
+                        <div className="bg-[#111111] border border-neutral-800 rounded-[2rem] overflow-hidden shadow-xl">
+                          <Image
+                            src={img.src}
+                            alt={img.title ?? `${project.title} screenshot ${idx + 1}`}
+                            width={1600}
+                            height={1200}
+                            className="object-contain w-full h-auto"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                        {img.title && (
+                          <div className="px-2 flex flex-col gap-1">
+                            <h4 className="text-white font-medium text-base">{img.title}</h4>
+                            {img.description && (
+                              <p className="text-neutral-400 text-sm leading-relaxed">{img.description}</p>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </section>

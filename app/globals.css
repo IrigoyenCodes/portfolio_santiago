@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  /* Matches the preloader to prevent flash */
-  background-color: #000000;
+  /* Muted purple-gray — shows through when the WebGL background is turned off */
+  background-color: #15121c;
 }
 
 /* Background dot-grid pattern used across bento and project cards */

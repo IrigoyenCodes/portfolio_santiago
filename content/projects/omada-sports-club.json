@@ -1,0 +1,93 @@
+{
+  "slug": "omada-sports-club",
+  "order": 6,
+  "title": "Ómada Family Sports Club",
+  "subtitle": "Bright, memphis-inspired landing for a family sports club in Puebla. Hero video, memberships, class schedule, and real-time Instagram feed.",
+  "about": "What is Ómada?\n\nA family sports club in Puebla with pool, tennis courts, soccer fields, gym, kids area and a café. The site had to feel as vibrant as the brand, give families the full picture of what the club offers, and move inquiries from Instagram DMs into a real contact flow.",
+  "image": "/project_images/omada_hero.webp",
+  "stats": [
+    "Next.js",
+    "Tailwind CSS",
+    "Vercel"
+  ],
+  "liveDemo": "https://omada-family-sports-club.vercel.app",
+  "gallery": [
+    {
+      "src": "/project_images/omada_full.webp",
+      "title": "Landing page",
+      "description": "Full landing: hero with aerial video of the club, disciplinas, spaces, instructors, membership plans, class schedule, map, and live Facebook + Instagram feeds."
+    }
+  ],
+  "challenge": {
+    "title": "The problem: a club with no front door online",
+    "description": "The club had Instagram and word of mouth, but no site to send prospects to. Every inquiry turned into a slow DM back-and-forth with no context.",
+    "cards": [
+      {
+        "title": "Nothing to point referrals at",
+        "description": "A family hearing about Ómada had no way to see the facilities, class schedule or membership options before showing up."
+      },
+      {
+        "title": "Instagram as a help desk",
+        "description": "Membership questions, class times, and prices all funneled into DMs. Slow for the family, slow for the staff."
+      },
+      {
+        "title": "A brand that needed room to breathe",
+        "description": "Ómada's identity is loud and playful — primary blues, pinks, yellows, bold display type. The site had to match it without turning into a mess."
+      }
+    ]
+  },
+  "solution": {
+    "title": "The solution: a bold, single-page club site",
+    "description": "One scrolling page covering everything a family needs before signing up: disciplines, spaces, instructors, memberships, class schedule, location, and a direct contact form.",
+    "features": [
+      {
+        "title": "Facility tour by section",
+        "description": "Each discipline (natación, fútbol, tenis, fitness) and each space (pool, courts, gym, kids area, café) gets its own card with photos."
+      },
+      {
+        "title": "Three membership plans",
+        "description": "Individual ($1,200), Familiar ($2,800), Juvenil ($800). Benefits listed per tier with a Familiar plan marked as 'más popular'."
+      },
+      {
+        "title": "Class schedule table",
+        "description": "Weekly schedule across all disciplines, plus a downloadable PDF for families to keep handy."
+      },
+      {
+        "title": "Live social feeds + contact",
+        "description": "Embedded Facebook and Instagram feeds for freshness, map + direction, and a form that lands straight in the staff's inbox."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "How it's built",
+    "description": "Next.js + Tailwind on Vercel. Static where possible, with social embeds for the live content.",
+    "categories": [
+      {
+        "name": "Frontend",
+        "description": "Next.js with Tailwind for the memphis-style layout. Custom color palette and bold display type baked into the design tokens."
+      },
+      {
+        "name": "Hosting",
+        "description": "Deployed on Vercel with image optimization through next/image."
+      },
+      {
+        "name": "Social & maps",
+        "description": "Embedded Facebook and Instagram feeds for freshness, Google Maps for the club location."
+      }
+    ]
+  },
+  "results": [
+    {
+      "title": "A real front door for the club",
+      "description": "Referrals, press, and ad traffic now land on a page that shows the club instead of a social profile."
+    },
+    {
+      "title": "Fewer DMs, better leads",
+      "description": "Membership inquiries come through the form with the context the staff needs to reply fast."
+    },
+    {
+      "title": "Brand in context",
+      "description": "The site lives up to Ómada's identity — bold, playful, unmistakable — without compromising on readability or mobile UX."
+    }
+  ]
+}

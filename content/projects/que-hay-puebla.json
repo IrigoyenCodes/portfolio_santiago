@@ -1,9 +1,9 @@
 {
   "slug": "que-hay-puebla",
-  "order": 2,
-  "title": "QUE HAY PUEBLA",
-  "subtitle": "Full-stack B2B SaaS directory platform with tiered subscriptions, interactive zone mapping, and a fully automated billing lifecycle.",
-  "about": "What is QUE HAY PUEBLA?\n\nPuebla's small businesses — restaurants, cafés, shops, and services — have no dedicated digital infrastructure. QueHay Puebla fills that gap with a geo-segmented discovery platform where business owners self-onboard, choose a subscription tier, and gain immediate access to an analytics dashboard tracking every customer interaction. The platform is built to scale across Mexico's mid-sized cities with zero operational overhead per new business added.",
+  "order": 4,
+  "title": "Qué Hay Puebla",
+  "subtitle": "A directory for local businesses in Puebla. Owners sign up on their own, pick a plan, and get a dashboard with their numbers.",
+  "about": "What is Qué Hay Puebla?\n\nMost small businesses in Puebla don't have a website and don't rank anywhere useful on Google. Qué Hay Puebla is a directory built around the city: owners can sign up on their own, choose a plan, and manage their listing, photos, and analytics from a single dashboard. Everything is self-serve, including billing.",
   "image": "/project_images/que_hay_puebla_hero.png",
   "stats": [
     "Next.js 15",
@@ -13,79 +13,79 @@
   ],
   "liveDemo": "https://www.quehaypuebla.com.mx",
   "challenge": {
-    "title": "The Challenge: No Digital Infrastructure for Local Commerce",
-    "description": "Local businesses in mid-sized Mexican cities lack the tools, budget, and technical skill to maintain an online presence. A platform serving them had to be friction-free for non-technical owners, financially sustainable through subscriptions, and resilient enough to handle geographic expansion without engineering intervention.",
+    "title": "The problem: local businesses with no online presence",
+    "description": "The city has thousands of small businesses that live on WhatsApp groups and word of mouth. Any product for them has to be cheap, easy to sign up for, and not require a sales call.",
     "cards": [
       {
-        "title": "Discovery Gap",
-        "description": "120,000+ businesses in Puebla's metro area had no dedicated local search layer — consumers relied on fragmented WhatsApp groups and word-of-mouth."
+        "title": "No search layer for the city",
+        "description": "Google is noisy and most of these businesses don't rank. Users were asking around in WhatsApp groups to find anything."
       },
       {
-        "title": "Manual Onboarding Bottleneck",
-        "description": "Any directory requiring manual admin entry per business cannot scale. The platform needed self-service onboarding with automated approval and billing activation."
+        "title": "Manual onboarding doesn't scale",
+        "description": "If every new business needs an admin to approve it, growth stops. Onboarding had to be entirely self-serve."
       },
       {
-        "title": "Monetization Without Friction",
-        "description": "Charging small businesses requires trust. The system needed transparent tier-based pricing, free trials, and a self-managed billing portal — all without a sales call."
+        "title": "Billing without a sales team",
+        "description": "Charging small businesses means being transparent. The site needed clear plans, free trials, and a billing portal they could run themselves."
       }
     ]
   },
   "solution": {
-    "title": "The Solution: A Self-Operating Geographic SaaS",
-    "description": "The platform handles the full lifecycle autonomously — from a business owner's first registration to their Stripe subscription renewal — while exposing analytics, media management, and tier-gated features through a clean role-based dashboard.",
+    "title": "The solution: a self-serve platform",
+    "description": "The platform handles the whole lifecycle on its own: a business owner signs up, picks a tier, pays through Stripe, and lands on a dashboard with analytics and media tools gated by their plan.",
     "features": [
       {
-        "title": "4-Tier Subscription Engine",
-        "description": "Stripe-powered tiers (Starter free, PRO $299, ELITE $599, PATROCINADOR $999 MXN/mo) with 7-day trials, annual billing discounts, and a self-service Customer Portal for upgrades and cancellations."
+        "title": "Four plans, Stripe-backed",
+        "description": "A free Starter and three paid tiers ($299, $599, $999 MXN/mo). 7-day trials, annual discounts, and a self-service portal for upgrades and cancels."
       },
       {
-        "title": "Zone-Based Interactive Map",
-        "description": "Leaflet map with real-time clustering across 8 city zones. Business pins are visually differentiated by tier, and a Haversine-based distance filter sorts results by proximity."
+        "title": "Interactive map by zone",
+        "description": "A Leaflet map that clusters pins across eight city zones. Pins are styled by tier and sorted by distance from the user."
       },
       {
-        "title": "Tier-Gated Feature System",
-        "description": "A centralized tierLimits config gates every feature — photo limits, analytics frequency, delivery links, Instagram mentions, and the 'Sorpréndeme' random-discovery engine — by subscription level."
+        "title": "Features gated by plan",
+        "description": "One config file controls what every tier gets: photo limits, analytics frequency, delivery links, Instagram mentions, and the random-discovery feature."
       },
       {
-        "title": "Real-Time Analytics Dashboard",
-        "description": "Tracks VIEW, CLICK_PHONE, CLICK_WHATSAPP, CLICK_WEBSITE, CLICK_DIRECTIONS, and SHARE events per business with frequency scaled to subscription tier (daily for Patrocinador, weekly for Elite, monthly for Pro)."
+        "title": "Analytics the owner can read",
+        "description": "Tracks views, phone taps, WhatsApp taps, website clicks, directions and shares. Reporting frequency scales with the plan."
       }
     ]
   },
   "techStack": {
-    "title": "Technical Depth: Architecture & Infrastructure",
-    "description": "Built as a production-grade Next.js 15 App Router application with server actions, edge middleware, and a multi-provider auth layer on top of a relational database.",
+    "title": "How it's built",
+    "description": "Next.js 15 App Router on top of Postgres, with Stripe handling billing.",
     "categories": [
       {
-        "name": "Full-Stack Framework",
-        "description": "Next.js 15 App Router with React Server Components and Server Actions. Middleware protects all /panel routes with JWT session validation via NextAuth.js v5."
+        "name": "Framework",
+        "description": "Next.js 15 App Router with Server Components and Server Actions. Middleware protects every /panel route."
       },
       {
-        "name": "Auth & RBAC",
-        "description": "NextAuth.js v5 with three providers: Google OAuth, Facebook OAuth, and Email/Password (bcryptjs). Three roles: CONSUMER, BUSINESS_OWNER, ADMIN — enforced at the middleware and API layer."
+        "name": "Auth",
+        "description": "NextAuth.js v5 with Google, Facebook and email/password. Three roles: consumer, business owner, admin."
       },
       {
-        "name": "Billing Infrastructure",
-        "description": "Stripe Checkout Sessions, webhook listeners for subscription lifecycle events, and the Customer Billing Portal. Trial periods and tier changes are handled entirely via webhook processing."
+        "name": "Billing",
+        "description": "Stripe Checkout and the Customer Portal. Trial starts, upgrades, downgrades and cancels are handled through webhooks."
       },
       {
-        "name": "Security & Rate Limiting",
-        "description": "Upstash Redis-backed rate limiting with three profiles: strict (5 req/min for auth), standard (20 req/min for mutations), and relaxed (100 req/min for reads). All inputs validated with Zod."
+        "name": "Rate limiting",
+        "description": "Upstash Redis with three profiles: strict for auth, standard for mutations, relaxed for reads. Zod on every input."
       }
     ]
   },
   "results": [
     {
-      "title": "Zero admin overhead",
-      "description": "per new business. Onboarding, approval, subscription activation, and analytics are fully automated end-to-end."
+      "title": "No admin per signup",
+      "description": "Onboarding, approval and billing all run themselves."
     },
     {
-      "title": "Full billing lifecycle automated",
-      "description": "Stripe webhooks handle trial starts, upgrades, downgrades, and cancellations with instant tier enforcement across the platform."
+      "title": "Full billing lifecycle on autopilot",
+      "description": "Stripe webhooks handle trials, upgrades, downgrades and cancels. Tier limits apply instantly."
     },
     {
-      "title": "Production SEO infrastructure",
-      "description": "Dynamic sitemap, Schema.org LocalBusiness JSON-LD, Open Graph tags, and an llms.txt file for AI agent discoverability — all generated server-side per business slug."
+      "title": "SEO that works per-business",
+      "description": "Dynamic sitemap, LocalBusiness JSON-LD, Open Graph, and an llms.txt file. Everything generated server-side per listing."
     }
   ],
   "gallery": [

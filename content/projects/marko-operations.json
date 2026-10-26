@@ -1,9 +1,9 @@
 {
   "slug": "marko-operations",
-  "order": 3,
-  "title": "Marko — Content OS",
-  "subtitle": "All-in-one social media command center for creators and agencies, with AI-powered workflow optimization.",
-  "about": "What is Marko?\n\nDigital creators and agencies lose hours every week jumping between TikTok drafts, Instagram notes, Google Docs, Notion boards, and native analytics dashboards — each platform siloed from the rest. Marko acts as a single command center, unifying the entire lifecycle of a post: from raw idea and scripting, to scheduling and cross-platform publishing, to final performance analytics. It is the content operating system built for creators who are serious about scaling.",
+  "order": 2,
+  "title": "Marko",
+  "subtitle": "Content OS for creators and agencies. Everything from the first idea to the published post lives in one tab.",
+  "about": "What is Marko?\n\nCreators and small agencies run their work across six apps: Notion for ideas, Google Docs for scripts, a native app for drafts, the camera roll for assets, a scheduler for publishing, and six different native dashboards for analytics. Marko puts all of that in one place.\n\nIt's a single workspace that covers the whole lifecycle of a post: saving inspiration, writing scripts, composing the post with a live preview, scheduling it on a calendar, and reading the numbers after it goes out.",
   "image": "/project_images/marko_hero.jpg",
   "stats": [
     "Next.js 15",
@@ -12,71 +12,71 @@
   ],
   "liveDemo": "https://trymarkomx.vercel.app",
   "challenge": {
-    "title": "The Challenge: Fragmented workflows killing creative momentum",
-    "description": "Professional content creators and agencies manage TikTok, Instagram, YouTube, LinkedIn, and Facebook simultaneously. Without a centralized system, content ideas get lost, publishing schedules drift, and performance data lives across six different native dashboards — making it impossible to see the full picture or iterate fast.",
+    "title": "The problem: the workflow is scattered",
+    "description": "Serious creators post across TikTok, Instagram, YouTube, LinkedIn and Facebook. Without one place to run it all from, ideas get lost, posts drift, and analytics live in six different dashboards.",
     "cards": [
       {
-        "title": "Scattered Content Pipelines",
-        "description": "Scripts lived in Google Docs, ideas in Notion, drafts in native apps, and analytics in each platform's own dashboard — zero single source of truth."
+        "title": "Scattered pipelines",
+        "description": "Scripts in Docs, ideas in Notion, drafts in native apps, analytics on each platform. No single source of truth."
       },
       {
-        "title": "Zero Cross-Platform Visibility",
-        "description": "Creators had no unified view of their publishing schedule or audience growth across TikTok, Instagram, and YouTube at once."
+        "title": "No cross-platform view",
+        "description": "No way to see the full publishing schedule or audience growth across every platform at once."
       },
       {
-        "title": "Blank Page Paralysis",
-        "description": "Without a system to capture and resurface saved inspiration, creators burned time staring at a blank page instead of producing content."
+        "title": "Blank page problem",
+        "description": "Without a system to resurface saved inspiration, creators lost hours staring at an empty draft."
       }
     ]
   },
   "solution": {
-    "title": "Our Solution: A Unified Content Command Center",
-    "description": "Marko centralizes every stage of the content workflow into a single high-fidelity web application — from saving a piece of inspiration in the Vault, to drafting a script, composing a post with a live mobile preview, scheduling it on the visual calendar, and analyzing its performance in a unified analytics dashboard.",
+    "title": "The solution: one tab, the whole workflow",
+    "description": "Marko covers every step of the content loop in one app: save a reference in the Vault, write the script, compose the post with a mobile preview, schedule it on the calendar, and read the analytics afterwards.",
     "features": [
       {
-        "title": "Visual Content Calendar",
-        "description": "A bird's-eye editorial calendar to plan, organize, and schedule posts across TikTok, Instagram, YouTube, LinkedIn, and Facebook from a single view."
+        "title": "Visual calendar",
+        "description": "An editorial calendar that plans and schedules posts across TikTok, Instagram, YouTube, LinkedIn and Facebook from one view."
       },
       {
         "title": "Inspiration Vault",
-        "description": "A personal media database where creators save videos, images, and references. Marko AI ingests this vault to proactively suggest future content ideas aligned with the creator's unique style."
+        "description": "A personal library for videos, images and references. Marko reads it to suggest ideas that fit the creator's style."
       },
       {
-        "title": "High-Fidelity Composer",
-        "description": "A multi-pane post editor with real-time mobile previews, ensuring content looks pixel-perfect across each platform's format before going live."
+        "title": "Composer with live preview",
+        "description": "Multi-pane post editor with real-time mobile previews so the post looks right on every platform before it goes live."
       }
     ]
   },
   "techStack": {
-    "title": "Our Tech Stack: Modern Edge-First Web",
-    "description": "Built for speed, real-time collaboration, and a premium feel — every architectural decision in Marko prioritizes developer velocity and a consumer-grade end-user experience.",
+    "title": "How it's built",
+    "description": "Modern web stack picked for speed and developer sanity.",
     "categories": [
       {
         "name": "Frontend",
-        "description": "Next.js 15 App Router with TypeScript and Tailwind CSS for a performant, type-safe UI with native-app-level responsiveness. Framer Motion (motion/react) drives all micro-interactions and page transitions."
+        "description": "Next.js 15 App Router with TypeScript and Tailwind. Framer Motion for the transitions and micro-interactions."
       },
       {
-        "name": "Backend & Auth",
-        "description": "Supabase powers Row Level Security auth, a Postgres database, real-time subscriptions for live updates, and bucket storage for media assets — all managed through a single edge-ready SDK."
+        "name": "Backend & auth",
+        "description": "Supabase for auth with Row Level Security, Postgres, real-time subscriptions, and bucket storage for media."
       },
       {
-        "name": "AI Layer",
-        "description": "Marko AI acts as an embedded creative partner, analyzing saved Vault references and engagement history to recommend optimal posting times, content structures, and daily ideation prompts."
+        "name": "AI layer",
+        "description": "Marko AI reads the Vault and engagement history to suggest posting times, structures, and daily prompts."
       }
     ]
   },
   "results": [
     {
-      "title": "Full Lifecycle in One Tab",
-      "description": "Replaced 6+ fragmented tools (Notion, Google Docs, native analytics, scheduling apps) with a single unified platform covering ideation, scripting, composing, scheduling, and analytics."
+      "title": "One tab, not six",
+      "description": "Replaces Notion, Docs, native analytics, and scheduling apps for the creator workflow."
     },
     {
-      "title": "Unified Cross-Platform Analytics",
-      "description": "Creators can track reach, engagement rate, follower growth, and top-performing posts across all connected platforms in a single high-fidelity dashboard with platform-specific filtering."
+      "title": "Cross-platform numbers",
+      "description": "Reach, engagement, follower growth and top posts across every connected platform in one dashboard."
     },
     {
-      "title": "AI-Driven Content Cadence",
-      "description": "Marko AI surfaces daily content recommendations based on Vault history and audience behavior, eliminating blank-page paralysis and keeping publishing schedules consistent."
+      "title": "A cadence that holds",
+      "description": "Daily suggestions from the Vault keep the schedule moving instead of waiting for inspiration to strike."
     }
   ],
   "gallery": [

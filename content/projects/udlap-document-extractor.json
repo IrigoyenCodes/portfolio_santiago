@@ -1,15 +1,15 @@
 {
   "slug": "udlap-document-extractor",
-  "order": 1,
-  "title": "UDLAP DOCUMENT EXTRACTOR",
-  "subtitle": "Browser-native AI pipeline that converts bulk institutional scans into structured, exportable data — zero manual entry.",
-  "about": "What is the UDLAP Document Extractor?\n\nInstitutional environments generate thousands of unstructured physical documents — work orders, supply requests, maintenance logs — that require hours of manual transcription. This React-based utility eliminates that bottleneck by routing raw PDFs and image scans through Vision Language Models, classifying each document by type, extracting its fields into a validated JSON schema, and exporting the aggregated results directly to Excel — all inside the browser, with no backend required.",
+  "order": 3,
+  "title": "UDLAP Document Extractor",
+  "subtitle": "A browser tool the UDLAP IT department uses to turn stacks of scanned paperwork into clean spreadsheets.",
+  "about": "What is the UDLAP Document Extractor?\n\nThe IT department deals with thousands of paper documents a year: work orders, supply requests, maintenance logs. Someone had to type all of that into a spreadsheet by hand. The extractor is a web app that reads those scans with a vision model, pulls the fields, and exports everything to Excel. It runs in the browser, no backend to maintain.",
   "image": "/project_images/udlap_extractor_processed.png",
   "stats": [
     "React 19",
     "TypeScript",
-    "Gemini & OpenRouter",
-    "Vite"
+    "Gemini",
+    "OpenRouter"
   ],
   "gallery": [
     "/project_images/udlap_extractor_main.png",
@@ -18,75 +18,67 @@
     "/project_images/udlap_extractor_full_main.png"
   ],
   "challenge": {
-    "title": "The Challenge: Unstructured Paperwork at Institutional Scale",
-    "description": "Processing high volumes of mixed-format institutional documents manually is error-prone and slow. The system needed to parse bulk PDFs concurrently, survive cloud API rate limits without degrading the UI, and accurately interpret documents with varying physical conditions — faded ink, handwriting, and inconsistent layouts.",
+    "title": "The problem: paperwork at institutional scale",
+    "description": "The documents are mixed formats, faded ink, handwritten notes, and no two forms look the same. Running them through a model one at a time wasn't going to cut it, and the API would rate-limit before the queue finished.",
     "cards": [
       {
-        "title": "Chaos to Schema",
-        "description": "Scanned documents carry no metadata, no consistent structure, and no predictable layout. The system had to infer document type and field boundaries from raw visual context alone."
+        "title": "No structure to lean on",
+        "description": "Scans have no metadata and no predictable layout. The model had to figure out the document type and the field positions from the image."
       },
       {
-        "title": "Resilient Async Queue",
-        "description": "Sequential AI requests with rate limit exposure required a stateful processing queue that could pause, recover, and report real-time ETA — without freezing the browser thread."
+        "title": "Rate limits",
+        "description": "A long batch meant hitting the AI provider's cap. The app needed to pause, recover, and keep the browser responsive the whole time."
       }
     ]
   },
   "solution": {
-    "title": "The Solution: Dual-Provider AI Architecture with Fallback Strategy",
-    "description": "A custom Service Manager orchestrates document processing through a primary AI provider, automatically falling back to a secondary model on failure — ensuring maximum uptime regardless of individual API availability.",
+    "title": "The solution: a resilient browser pipeline",
+    "description": "A service manager runs the queue through a primary provider and falls back to a second one when the first fails. Everything is validated against a schema before it hits the UI.",
     "features": [
       {
-        "title": "AI Provider Fallback Pattern",
-        "description": "A dynamic Service Manager switches between Google GenAI (Gemini Flash) and OpenRouter (Qwen-VL) based on live availability, creating a fault-tolerant extraction pipeline."
+        "title": "Dual provider with fallback",
+        "description": "Primary is Gemini Flash, fallback is Qwen-VL through OpenRouter. If one is down or rate-limited, the queue keeps moving."
       },
       {
-        "title": "Strict JSON Schema Enforcement",
-        "description": "AI responses are validated against typed DTOs at generation time, preventing hallucinated or malformed data from ever reaching the UI layer."
+        "title": "Schema-enforced output",
+        "description": "Responses are typed and validated at generation time, so hallucinated or malformed rows never make it into the sheet."
       },
       {
-        "title": "Decoupled Container Hooks",
-        "description": "All file serialization (PDF-to-Base64) and sequential batching logic lives in isolated Custom Hooks, keeping UI components purely declarative and free of side effects."
-      },
-      {
-        "title": "On-Device Archival",
-        "description": "Processed files are automatically renamed using AI-extracted context and bundled into a downloadable ZIP via JSZip — creating a normalized archive without any server involvement."
+        "title": "ZIP export",
+        "description": "Processed files get renamed with their extracted context and bundled into a ZIP via JSZip, all client-side."
       }
     ]
   },
   "techStack": {
-    "title": "Technical Depth: The Architecture",
-    "description": "A purpose-built frontend pipeline for AI-augmented document intelligence, designed for correctness and browser-native execution.",
+    "title": "How it's built",
+    "description": "React 19 on Vite. Everything runs in the browser with no server to maintain.",
     "categories": [
       {
-        "name": "Frontend Engineering",
-        "description": "React 19 with Vite. Heavy use of useMemo for dashboard performance and strict functional component patterns for predictable, testable UI rendering."
+        "name": "Frontend",
+        "description": "React 19 and Vite, with TypeScript end to end."
       },
       {
-        "name": "Vision Language Models",
-        "description": "Integrated with the @google/genai SDK and OpenRouter endpoints. JSON Schema mode enforced at the API call level to constrain AI output to well-typed structures."
+        "name": "Vision models",
+        "description": "@google/genai for Gemini and the OpenRouter SDK for Qwen-VL. JSON schema mode is used to constrain outputs."
       },
       {
-        "name": "Browser File System",
-        "description": "Native File API for binary handling, Base64 encoding for multimodal LLM payloads, and JSZip for client-side archive generation — no uploads, no servers."
-      },
-      {
-        "name": "Type Safety",
-        "description": "End-to-end TypeScript interfaces map arbitrary AI output to strict Data Transfer Objects before any component renders, eliminating runtime type errors."
+        "name": "Browser APIs",
+        "description": "Native File API, base64 encoding for the multimodal payload, and JSZip for the archive."
       }
     ]
   },
   "results": [
     {
-      "title": "Eliminated manual data entry",
-      "description": "for bulk institutional document workflows, reducing processing time from hours to seconds per batch."
+      "title": "No more manual typing",
+      "description": "What used to take hours per batch now takes a few minutes while the queue runs."
     },
     {
-      "title": "Zero-backend architecture",
-      "description": "The entire pipeline — AI inference, parsing, export, and archival — runs natively in the browser with no server dependency."
+      "title": "No server to run",
+      "description": "Everything lives in the browser, which means the IT team doesn't have to maintain anything."
     },
     {
-      "title": "Fault-tolerant by design",
-      "description": "Dual-provider fallback ensures continuous operation even when a primary AI model is rate-limited or unavailable."
+      "title": "Keeps going when the API doesn't",
+      "description": "The fallback provider keeps the batch moving when the primary gets rate-limited."
     }
   ]
 }

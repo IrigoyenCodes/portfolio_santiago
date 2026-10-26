@@ -2,14 +2,13 @@
   "slug": "kor-activewear",
   "order": 5,
   "title": "KOR Activewear",
-  "subtitle": "Custom Full-Stack E-Commerce Engine & REST API",
-  "about": "What is KOR Activewear?\n\nKOR Activewear is a completely custom-built e-commerce platform designed from the ground up without relying on monolithic frameworks like Shopify or React. The project demonstrates an in-depth understanding of fundamental web architecture by decoupling a vanilla JavaScript frontend from a custom PHP REST API, giving total control over security protocols, state management, and the rendering pipeline.",
+  "subtitle": "A custom e-commerce built from scratch. No Shopify, no React. Just PHP, MySQL and vanilla JS.",
+  "about": "What is KOR Activewear?\n\nAn e-commerce project built from the ground up without a framework. The point was to actually understand what the frameworks do: how a cart persists across tabs, how passwords get hashed properly, how a REST API hangs together. The frontend is vanilla JavaScript, the backend is a custom PHP API, and the database is MySQL.",
   "image": "/project_images/kor_activewear_hero.png",
   "stats": [
-    "PHP REST API",
+    "PHP",
     "Vanilla JS",
-    "MySQL",
-    "Glassmorphism"
+    "MySQL"
   ],
   "gallery": [
     "/project_images/kor_activewear_carrito.jpg",
@@ -18,63 +17,63 @@
     "/project_images/kor_activewear_full_main.jpg"
   ],
   "challenge": {
-    "title": "The Challenge: Engineering Without Training Wheels",
-    "description": "Building a full-scale e-commerce platform natively required overcoming the complexities of state persistence, security, and dynamic rendering that modern frameworks usually obscure.",
+    "title": "The problem: building a store without a framework",
+    "description": "React and Shopify hide a lot of plumbing. Doing it without them meant dealing with state, auth, and security the hard way.",
     "cards": [
       {
-        "title": "Native State Management",
-        "description": "Orchestrating a persistent, cross-tab synchronized shopping cart and user authentication state using only Vanilla JavaScript and Web Storage APIs."
+        "title": "Cart and auth state",
+        "description": "A cart that syncs across tabs and an auth system that doesn't blow up, both using only the browser's Web Storage APIs."
       },
       {
-        "title": "Security from Scratch",
-        "description": "Implementing enterprise-grade security protocols natively, requiring strict manual handling of password hashing, session tokens, and threat mitigation."
+        "title": "Security from scratch",
+        "description": "Password hashing, session tokens, CSRF, rate limits. No library doing it for you."
       }
     ]
   },
   "solution": {
-    "title": "The Solution: A Decoupled, Robust Architecture",
-    "description": "By designing a strict separation of concerns, the project features a highly secure PHP backend serving endpoints to an optimized, accessibility-first frontend.",
+    "title": "The solution: a clean PHP API and a vanilla frontend",
+    "description": "Strict separation between the two sides. PHP serves the data, the frontend consumes it.",
     "features": [
       {
-        "title": "Custom PHP REST API",
-        "description": "Developed a full suite of API endpoints handling user authentication (login/register/reset), product CRUD operations, cart logic, and modular image uploads."
+        "title": "PHP REST API",
+        "description": "Endpoints for auth (login, register, reset), product CRUD, cart logic and image uploads."
       },
       {
-        "title": "Dynamic Vanilla Frontend",
-        "description": "Engineered a responsive, glassmorphism-styled UI featuring Intersection Observer lazy loading, skeleton screens, and highly optimized DOM manipulation without Virtual DOM overhead."
+        "title": "Vanilla JS frontend",
+        "description": "Responsive UI with Intersection Observer for lazy loading and skeleton screens. No virtual DOM, no framework."
       }
     ]
   },
   "techStack": {
-    "title": "Technical Depth: The Architecture",
-    "description": "A comprehensive breakdown of the custom infrastructure powering the platform.",
+    "title": "How it's built",
+    "description": "The actual stack behind the store.",
     "categories": [
       {
-        "name": "Backend Engineering",
-        "description": "Object-Oriented PHP driving REST endpoints. Features PDO prepared statements, transactional bulk operations, and modular helpers (config, env, database)."
+        "name": "Backend",
+        "description": "Object-oriented PHP with PDO prepared statements and transactional bulk operations."
       },
       {
-        "name": "Advanced Security",
-        "description": "Incorporated Argon2id password hashing, CSRF token validation, request rate-limiting, account lockouts, and comprehensive input sanitization routines."
+        "name": "Security",
+        "description": "Argon2id password hashing, CSRF tokens, rate limits, account lockouts, input sanitization."
       },
       {
-        "name": "Database Design",
-        "description": "Relational MySQL schema with properly enforced foreign keys, cascading deletes, and optimized indexing for products, variants, and session-based cart management."
+        "name": "Database",
+        "description": "MySQL with foreign keys, cascading deletes, and indexes on products, variants and sessions."
       },
       {
-        "name": "Frontend & Optimization",
-        "description": "Semantic HTML5, CSS3 with advanced backdrop filters, and modular ES6 JavaScript. Includes Open Graph SEO, JSON-LD schemas, and ARIA accessibility standards."
+        "name": "Frontend",
+        "description": "Semantic HTML, modular ES6, backdrop filters for the look. Open Graph tags and JSON-LD included."
       }
     ]
   },
   "results": [
     {
-      "title": "Structural Integrity",
-      "description": "Delivered a tightly coupled schema-to-API data flow, ensuring reliable product management via a dedicated admin CRUD panel."
+      "title": "A working admin panel",
+      "description": "Admin CRUD for products and variants, backed by the same API the store uses."
     },
     {
-      "title": "Production-Ready Security",
-      "description": "Successfully mitigated common web vulnerabilities, achieving a security posture typically reserved for enterprise systems rather than standard academic projects."
+      "title": "The security was real",
+      "description": "Covered the usual OWASP suspects (SQL injection, CSRF, brute force) end to end, without a library."
     }
   ]
 }

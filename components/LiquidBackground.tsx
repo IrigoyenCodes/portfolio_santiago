@@ -574,14 +574,17 @@ const PERF_LABELS: Record<PerfMode, { label: string; title: string }> = {
 export default function LiquidBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
   const appRef = useRef<App | null>(null);
-  const [mode, setMode] = useState<PerfMode>('high');
-  const [colorMode, setColorMode] = useState<ColorMode>('sunset');
+  const [mode, setMode] = useState<PerfMode>('eco');
+  const [colorMode, setColorMode] = useState<ColorMode>('aurora');
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     try {
-      appRef.current = new App(containerRef.current);
+      const app = new App(containerRef.current);
+      appRef.current = app;
+      app.setColorMode('aurora');
+      app.setPerformanceMode('eco');
     } catch (e) {
       console.error('Failed to initialize WebGL background:', e);
     }
