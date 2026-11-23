@@ -3,12 +3,12 @@
   "order": 1,
   "title": "Atlas",
   "subtitle": "AI setter for content creators. Replies on Instagram, WhatsApp and TikTok in the creator's own voice, qualifies the lead, and hands it to a closer ready to book.",
-  "about": "What is Atlas?\n\nContent creators lose money inside their DMs every day. The volume is too high, the replies are too slow, and most of the real leads never make it to a call. Atlas is the AI setter that reads every inbox the creator has — Instagram, WhatsApp, TikTok — and replies in the creator's own voice, tone and style, including voice notes and video. It runs the full qualification flow, keeps the follow-ups going, and only hands a lead to the closer team once it's actually ready to move.\n\nSo far it has helped creators generate over $400,000 USD in bookings and saved them more than $10,000 USD a month that used to go to human setter teams.",
+  "about": "What is Atlas?\n\nContent creators lose money inside their DMs every day. The volume is too high, the replies are too slow, and most of the real leads never make it to a call. Atlas is the AI setter that reads every inbox the creator has — Instagram, WhatsApp, TikTok — and replies in the creator's own voice, tone and style, including voice notes and video. It runs the full qualification flow, keeps the follow-ups going, and only hands a lead to the closer team once it's actually ready to move.\n\nAtlas is the product behind HYATLAS.ai, a bootstrapped SaaS with 10+ paying clients (creators up to 5M followers) and $10K MRR. So far it has helped creators generate over $400,000 USD in revenue.",
   "image": "/project_images/atlas_hero.webp",
   "stats": [
-    "Next.js",
-    "Supabase",
-    "WhatsApp API",
+    "Django",
+    "PostgreSQL",
+    "Celery/Redis",
     "Meta Business Partner"
   ],
   "liveDemo": "https://hyatlas.ai",
@@ -81,34 +81,38 @@
   },
   "techStack": {
     "title": "How it's built",
-    "description": "Next.js on the front, Supabase and Postgres on the back, with workers consuming webhooks from the real messaging APIs.",
+    "description": "A multi-tenant Django platform on PostgreSQL, with Celery workers consuming webhooks from the real messaging APIs at 100K+ events a day.",
     "categories": [
       {
-        "name": "Frontend",
-        "description": "Next.js App Router with TypeScript and Tailwind. One dashboard for the creator and the closer team."
+        "name": "Backend",
+        "description": "Django and PostgreSQL behind PgBouncer, with Celery/Redis on dedicated queues. Multi-tenant from day one."
       },
       {
-        "name": "Backend",
-        "description": "Supabase (Postgres + auth + storage), with worker processes consuming webhooks from WhatsApp Business, the Instagram Graph API, and TikTok Business Messaging. Meta Business Partner integration."
+        "name": "Integrations",
+        "description": "Meta's messaging APIs (Instagram and WhatsApp, respecting the 24-hour window policy), TikTok, ManyChat and Calendly. Meta Business Partner."
+      },
+      {
+        "name": "Reliability",
+        "description": "Tuned gevent workers and PgBouncer pooling, plus Redis distributed locks, to absorb bursty traffic without DB connection exhaustion or duplicate-message races."
       },
       {
         "name": "AI layer",
-        "description": "Model-agnostic agent that follows the creator's playbook and trains per account on their past conversations, voice notes and video style."
+        "description": "Routes each task by complexity across multiple LLM providers and smaller models. A feedback loop derives rules and examples from booked conversations and creator approvals."
       }
     ]
   },
   "results": [
     {
       "title": "$400k+ generated for clients",
-      "description": "Bookings closed by creator teams that came through the Atlas inbox."
+      "description": "Revenue closed by creator teams that came through the Atlas inbox. 10+ paying clients and $10K MRR."
     },
     {
-      "title": "$10k+/month saved",
-      "description": "Clients cut their human setter payroll after rolling out Atlas across their channels."
+      "title": "100K+ webhook events a day",
+      "description": "Including 21K+ inbound DMs a day, without connection exhaustion or duplicate replies."
     },
     {
-      "title": "A 5% lift that pays for itself many times over",
-      "description": "On a $100k funnel, a 5% booking-rate lift is $62,500 more revenue. That's the whole pitch."
+      "title": "70% lower LLM costs",
+      "description": "Routing each task by complexity to cheaper LLMs and SLMs instead of sending everything to the biggest model."
     }
   ]
 }

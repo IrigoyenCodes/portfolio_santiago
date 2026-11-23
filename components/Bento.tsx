@@ -19,16 +19,16 @@ export default function Bento() {
               <div>
                 <div className="text-sm font-medium text-white mb-4 flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> Languages</div>
                 <div className="flex flex-wrap gap-2">
-                  {['Python', 'TypeScript', 'JavaScript', 'SQL', 'Java'].map(t => (
+                  {['Python', 'TypeScript', 'JavaScript', 'SQL'].map(t => (
                     <span key={t} className="px-2.5 py-1 text-xs font-medium text-neutral-300 bg-neutral-900 border border-neutral-800 rounded-md">{t}</span>
                   ))}
                 </div>
               </div>
               {/* Box 2 */}
               <div>
-                <div className="text-sm font-medium text-white mb-4 flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Frontend</div>
+                <div className="text-sm font-medium text-white mb-4 flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Frontend & Web</div>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'Next.js', 'Tailwind CSS', 'HTML/CSS'].map(t => (
+                  {['React', 'Next.js', 'Tailwind CSS', 'Prisma', 'Supabase', 'Stripe', 'NextAuth'].map(t => (
                     <span key={t} className="px-2.5 py-1 text-xs font-medium text-neutral-300 bg-neutral-900 border border-neutral-800 rounded-md">{t}</span>
                   ))}
                 </div>
@@ -37,7 +37,7 @@ export default function Bento() {
               <div>
                 <div className="text-sm font-medium text-white mb-4 flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500" /> Backend & AI</div>
                 <div className="flex flex-wrap gap-2">
-                  {['Node.js', 'PostgreSQL', 'MySQL', 'Prisma', 'Supabase', 'OpenRouter', 'Scikit-learn'].map(t => (
+                  {['Django', 'Node.js', 'PostgreSQL', 'Redis', 'Celery', 'PgBouncer', 'LLM routing', 'RAG', 'OCR pipelines', 'Scikit-learn', 'Pandas'].map(t => (
                     <span key={t} className="px-2.5 py-1 text-xs font-medium text-neutral-300 bg-neutral-900 border border-neutral-800 rounded-md">{t}</span>
                   ))}
                 </div>
@@ -89,18 +89,18 @@ export default function Bento() {
                 
                 <div>
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-sm font-medium text-white">English <span className="text-neutral-500 text-xs font-normal ml-1">B2 (TOEFL 85)</span></span>
+                    <span className="text-sm font-medium text-white">English <span className="text-neutral-500 text-xs font-normal ml-1">Fluent</span></span>
                     <span className="text-xs">🇺🇸</span>
                   </div>
-                  <div className="w-full bg-neutral-900 h-1.5 rounded-full overflow-hidden"><div className="bg-neutral-500 w-[75%] h-full" /></div>
+                  <div className="w-full bg-neutral-900 h-1.5 rounded-full overflow-hidden"><div className="bg-neutral-500 w-[90%] h-full" /></div>
                 </div>
                 
                 <div>
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-sm font-medium text-white">French <span className="text-neutral-500 text-xs font-normal ml-1">B2</span></span>
+                    <span className="text-sm font-medium text-white">French <span className="text-neutral-500 text-xs font-normal ml-1">Fluent</span></span>
                     <span className="text-xs">🇫🇷</span>
                   </div>
-                  <div className="w-full bg-neutral-900 h-1.5 rounded-full overflow-hidden"><div className="bg-neutral-600 w-[75%] h-full" /></div>
+                  <div className="w-full bg-neutral-900 h-1.5 rounded-full overflow-hidden"><div className="bg-neutral-600 w-[90%] h-full" /></div>
                 </div>
 
                 <div>
@@ -115,14 +115,14 @@ export default function Bento() {
           </div>
         </div>
 
-        {/* Col 3: Puebla Anchor */}
+        {/* Col 3: Location Anchor */}
         <div className="bg-neutral-800 border-none rounded-[2rem] relative overflow-hidden md:col-span-1 h-full min-h-[500px]">
           <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a5f] via-[#1a2238] to-[#0a0a0a] z-10" />
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl z-10" />
           <div className="absolute inset-0 p-8 md:p-10 flex flex-col z-20">
-            <h3 className="text-2xl font-display font-medium text-white mb-4 leading-snug">Puebla, <br/> Mexico</h3>
+            <h3 className="text-2xl font-display font-medium text-white mb-4 leading-snug">Paris, <br/> France</h3>
             <p className="text-neutral-300 text-[15px] leading-relaxed max-w-[250px] mb-8">
-              Computer Systems Engineering at UDLAP. Working remotely with teams in Mexico and the US.
+              B.S. in Computer Systems Engineering at UDLAP (GPA 3.7/4.0), on exchange in the Bachelor in AI at ECE Paris until April 2027.
             </p>
             <div className="mt-auto">
               <p className="text-xs font-mono tracking-widest uppercase text-neutral-500 mb-4">Focus</p>

@@ -7,8 +7,9 @@
   "image": "/project_images/marko_hero.jpg",
   "stats": [
     "Next.js 15",
+    "React 19",
     "Supabase",
-    "Framer Motion"
+    "OpenRouter"
   ],
   "liveDemo": "https://trymarkomx.vercel.app",
   "challenge": {
@@ -61,7 +62,7 @@
       },
       {
         "name": "AI layer",
-        "description": "Marko AI reads the Vault and engagement history to suggest posting times, structures, and daily prompts."
+        "description": "An AI retrieval and recommendation system (OpenRouter, Qwen) with semantic search over saved videos and natural-language content suggestions."
       }
     ]
   },

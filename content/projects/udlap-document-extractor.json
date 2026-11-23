@@ -3,12 +3,12 @@
   "order": 3,
   "title": "UDLAP Document Extractor",
   "subtitle": "A browser tool the UDLAP IT department uses to turn stacks of scanned paperwork into clean spreadsheets.",
-  "about": "What is the UDLAP Document Extractor?\n\nThe IT department deals with thousands of paper documents a year: work orders, supply requests, maintenance logs. Someone had to type all of that into a spreadsheet by hand. The extractor is a web app that reads those scans with a vision model, pulls the fields, and exports everything to Excel. It runs in the browser, no backend to maintain.",
+  "about": "What is the UDLAP Document Extractor?\n\nThe IT department deals with thousands of paper documents a year: work orders, supply requests, maintenance logs. Someone had to type all of that into a spreadsheet by hand. The extractor is a web app that reads those scans with open-source OCR and LLMs through OpenRouter, classifies each IT service record, pulls out 10 fields, and exports everything to Excel. It replaced a 7-step manual workflow and is still in use today.",
   "image": "/project_images/udlap_extractor_processed.png",
   "stats": [
-    "React 19",
+    "React",
     "TypeScript",
-    "Gemini",
+    "OCR",
     "OpenRouter"
   ],
   "gallery": [
@@ -69,16 +69,16 @@
   },
   "results": [
     {
-      "title": "No more manual typing",
-      "description": "What used to take hours per batch now takes a few minutes while the queue runs."
+      "title": "85% faster",
+      "description": "From 3–5 minutes of manual work to under 10 seconds per document. A 50-document batch finishes in under 5 minutes."
     },
     {
-      "title": "No server to run",
-      "description": "Everything lives in the browser, which means the IT team doesn't have to maintain anything."
+      "title": "Under 1% need fixing",
+      "description": "A built-in review table catches the rest; fewer than 1% of documents need manual OCR correction."
     },
     {
-      "title": "Keeps going when the API doesn't",
-      "description": "The fallback provider keeps the batch moving when the primary gets rate-limited."
+      "title": "Still in use",
+      "description": "The IT department kept using it after the internship, replacing the old 7-step workflow."
     }
   ]
 }

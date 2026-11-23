@@ -22,7 +22,7 @@ export default function Hero() {
         transition={{ delay: 0.1, duration: 0.5 }}
         className="text-lg md:text-xl text-neutral-300 max-w-2xl mt-12 leading-relaxed"
       >
-        CTO at{' '}
+        Co-Founder &amp; Lead Engineer at{' '}
         <a
           href="https://hyatlas.ai"
           target="_blank"
@@ -49,7 +49,7 @@ export default function Hero() {
         >
           @ECE Paris
         </a>
-        .
+        . Open to a full-time software engineering internship, April – August 2027.
       </motion.p>
 
       <motion.div

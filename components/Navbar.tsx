@@ -6,7 +6,7 @@ import { useScrollY } from "@/hooks/use-scroll-y";
 import { useEffect, useRef, useState } from "react";
 
 const PHONES = [
-  { label: "France", flag: "🇫🇷", intl: "+33 7 55 83 12 780", waUrl: "https://wa.me/337558312780", telUrl: "tel:+337558312780" },
+  { label: "France", flag: "🇫🇷", intl: "+33 7 58 31 27 80", waUrl: "https://wa.me/33758312780", telUrl: "tel:+33758312780" },
   { label: "Mexico",  flag: "🇲🇽", intl: "+52 221 598 4522",   waUrl: "https://wa.me/522215984522",   telUrl: "tel:+522215984522" },
 ];
 

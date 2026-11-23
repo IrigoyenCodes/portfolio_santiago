@@ -10,7 +10,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mon
 
 export const metadata: Metadata = {
   title: 'Santiago Irigoyen',
-  description: 'Fullstack engineer. Web apps and AI tooling, based in Puebla.',
+  description: 'Full-stack & AI engineer. Co-founder of HYATLAS.ai, AI exchange student at ECE Paris.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

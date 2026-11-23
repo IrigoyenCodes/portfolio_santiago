@@ -17,25 +17,31 @@ export default function Experience() {
                  <Rocket className="w-5 h-5 text-white" />
                </div>
                <div>
-                 <h3 className="text-2xl font-display font-medium text-white">CTO</h3>
-                 <div className="text-neutral-400 text-sm font-medium mt-1">HYATLAS.ai</div>
+                 <h3 className="text-2xl font-display font-medium text-white">Co-Founder &amp; Lead Engineer</h3>
+                 <div className="text-neutral-400 text-sm font-medium mt-1">HYATLAS.ai · Mexico – Paris</div>
                </div>
             </div>
-            <p className="text-neutral-500 text-sm mt-4 tracking-wide font-mono uppercase">2025 - Present</p>
+            <p className="text-neutral-500 text-sm mt-4 tracking-wide font-mono uppercase">May 2026 - Present</p>
           </div>
           <div className="md:w-2/3 flex flex-col gap-6 text-neutral-200 relative z-10 text-[15px] leading-relaxed">
             <p>
-              Running all software and infrastructure at HYATLAS.ai: the AI setter product, the CRM, the integrations with WhatsApp, Instagram and TikTok, and everything that keeps it online for creator teams.
+              Co-founded a bootstrapped, Meta Business Partner SaaS that automates Instagram, TikTok and WhatsApp DM sales for content creators. I built and own the entire software stack, managing up to 2 developers in a 6-person team.
             </p>
             <ul className="flex flex-col gap-3 text-neutral-300">
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Built the product from zero: Next.js dashboard, Supabase + Postgres backend, agent workers.
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> 10+ paying clients (creators up to 5M followers), $10K MRR and $400K+ in revenue generated for clients.
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Shipped the Meta Business Partner integrations and the TikTok Business Messaging layer.
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Architected the multi-tenant platform (Django, PostgreSQL, Celery/Redis, PgBouncer) integrating Meta&apos;s messaging APIs, ManyChat, Calendly and multiple LLM providers.
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Helped clients generate $400k+ in bookings and cut $10k+/month in setter payroll.
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Hardened the webhook pipeline for 100K+ events/day (21K+ inbound DMs/day): tuned gevent workers and PgBouncer pooling, added Redis distributed locks and dedicated Celery queues.
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Cut LLM inference costs by 70% by routing each task by complexity to cheaper LLMs and SLMs.
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Building a feedback-learning loop where the AI setter derives rules and examples from booked conversations.
               </li>
             </ul>
           </div>
@@ -50,21 +56,24 @@ export default function Experience() {
                </div>
                <div>
                  <h3 className="text-2xl font-display font-medium text-white">IT Intern</h3>
-                 <div className="text-neutral-400 text-sm font-medium mt-1">UDLAP</div>
+                 <div className="text-neutral-400 text-sm font-medium mt-1">UDLAP · Puebla, Mexico</div>
                </div>
             </div>
-            <p className="text-neutral-500 text-sm mt-4 tracking-wide font-mono uppercase">Sep 2024 - Present</p>
+            <p className="text-neutral-500 text-sm mt-4 tracking-wide font-mono uppercase">Sep 2024 - Apr 2026</p>
           </div>
           <div className="md:w-2/3 flex flex-col gap-6 text-neutral-200 relative z-10 text-[15px] leading-relaxed">
             <p>
-              Built a document processing tool for the IT department. React + TypeScript on the front, OpenRouter calls on the back.
+              Proposed and built a full-stack document-processing app (React, TypeScript, open-source OCR, OpenRouter LLMs) for the IT department. Still in use today.
             </p>
             <ul className="flex flex-col gap-3 text-neutral-300">
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> OCR pipeline on top of Qwen3-VL to pull fields out of forms the previous OCR couldn&apos;t read.
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Classifies IT service records and extracts 10 fields into Excel, replacing a 7-step manual workflow.
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Small internal tools the IT team uses day to day for routing and classifying scanned docs.
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Cut end-to-end processing time by 85%: 3–5 min down to under 10 s per document, 50-document batches in under 5 min.
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2 shrink-0" /> Built-in review table, with under 1% of documents needing manual OCR correction.
               </li>
             </ul>
           </div>
