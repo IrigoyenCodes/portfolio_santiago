@@ -9,11 +9,11 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-5xl sm:text-6xl lg:text-[7rem] leading-[1.02] font-medium tracking-tight font-display text-white max-w-6xl"
+        className="text-5xl sm:text-6xl lg:text-[7rem] leading-[1.02] font-medium tracking-tight font-display text-neutral-500 max-w-6xl"
       >
         AI engineer,
         <br className="hidden sm:block" />
-        <span className="text-neutral-500"> building fullstack products.</span>
+        <span className="text-white"> building fullstack products.</span>
       </motion.h1>
 
       <motion.p
